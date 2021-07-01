@@ -16,7 +16,7 @@ This article shows how to use Rhino to reach beyond JavaScript into Java. Scrip
 Note that the ECMA standard doesn't cover communication with Java (or with any external object system for that matter). All the functionality covered in this chapter should thus be considered an extension.
 
 
-## [Accessing Java Packages and Classes
+## Accessing Java Packages and Classes
 Every piece of Java code is part of a class. Every Java class is part of a package. In JavaScript, however, scripts exist outside of any package hierarchy. How then, do we access classes in Java packages?
 
 Rhino defines a top-level variable named `Packages`. The properties of the `Packages` variable are all the top-level Java packages, such as `java` and `com`. For example, we can access the value of the `java`package:
@@ -54,7 +54,8 @@ It's important to note that Java imports `java.lang.*` implicitly, while Rhino d
 
 One thing to be careful of is Rhino's handling of errors in specifying Java package or class names. If `java.MyClass` is accessed, Rhino attempts to load a class named `java.MyClass`. If that load fails, it assumes that `java.MyClass` is a package name, and no error is reported:
 
-```js> java.MyClass
+```
+js> java.MyClass
 [JavaPackage java.MyClass]
 ```
 
@@ -91,9 +92,7 @@ org.mozilla.javascript.Context@bb6ab6```
 
 ```
 
-### [Working with Java](#working_with_java "Permalink to Working with Java")
-
-<div>
+## Working with Java
 
 Now that we can access Java classes, the next logical step is to create an object. This works just as in Java, with the use of the `new` operator:
 
@@ -158,11 +157,8 @@ js> f.directory
 false
 ```
 
-</div>
 
-### [Calling Overloaded Methods](#calling_overloaded_methods "Permalink to Calling Overloaded Methods")
-
-<div>
+## Calling Overloaded Methods
 
 The process of choosing a method to call based upon the types of the arguments is called _overload resolution_. In Java, overload resolution is performed at compile time, while in Rhino it occurs at runtime. This difference is inevitable given JavaScript's use of dynamic typing as was discussed in Chapter 2: since the type of a variable is not known until runtime, only then can overload resolution occur.
 
@@ -225,11 +221,8 @@ class java.lang.String g(int,java.lang.String)
 
 See [Java Method Overloading and LiveConnect 3](http://web.archive.org/web/20110623074154/http://www.mozilla.org/js/liveconnect/lc3_method_overloading.html) for a more precise definition of overloading semantics.
 
-</div>
 
-### [Implementing Java Interfaces](#implementing_java_interfaces "Permalink to Implementing Java Interfaces")
-
-<div>
+## Implementing Java Interfaces
 
 Now that we can access Java classes, create Java objects, and access fields, methods, and properties of those objects, we have a great deal of power at our fingertips. However, there are a few instances where that is not enough: many APIs in Java work by providing interfaces that clients must implement. One example of this is the `Thread` class: its constructor takes a `Runnable` that contains a single method `run` that will be called when the new thread is started.
 
@@ -265,11 +258,7 @@ The final `js` prompt and the output from the new thread may appear in either or
 
 Behind the scenes, Rhino generates the bytecode for a new Java class that implements `Runnable` and forwards all calls to its `run` method over to an associated JavaScript object. The object that implements this class is called a _Java adapter_. Because the forwarding to JavaScript occurs at runtime, it is possible to delay defining the methods implementing an interface until they are called. While omitting a required method is bad practice for programming in the large, it's useful for small scripts and for exploratory programming.
 
-</div>
-
-### [The JavaAdapter Constructor](#the_javaadapter_constructor "Permalink to The JavaAdapter Constructor")
-
-<div>
+## The JavaAdapter Constructor
 
 In the previous section we created Java adapters using the `new` operator with Java interfaces. This approach has its limitations: it's not possible to implement multiple interfaces, nor can we extend non-abstract classes. For these reasons there is a `JavaAdapter` constructor.
 
@@ -282,11 +271,7 @@ Here `javaIntfOrClass` is an interface to implement or a class to extend and `ja
 
 In practice there's little need to call the `JavaAdapter` constructor directly. Most of the time the previous syntaxes using the `new` operator will be sufficient.
 
-</div>
-
-### [JavaScript Functions as Java Interfaces](#javascript_functions_as_java_interfaces "Permalink to JavaScript Functions as Java Interfaces")
-
-<div>
+## JavaScript Functions as Java Interfaces
 
 Often we need to implement an interface with only one method, like in the previous `Runnable` example or when providing various event listener implementations. To facilitate this Rhino allows to pass JavaScript function when such interface is expected. The function is called as the implementation of interface method.
 
@@ -315,11 +300,7 @@ true
 js> Calling System.exit()...
 ```
 
-</div>
-
-### [Creating Java Arrays](#creating_java_arrays "Permalink to Creating Java Arrays")
-
-<div>
+## Creating Java Arrays
 
 Rhino provides no special syntax for creating Java arrays. You must use the `java.lang.reflect.Array` class for this purpose. To create an array of five Java strings you would make the following call:
 
@@ -346,11 +327,7 @@ js> new java.lang.String(a)
 hi
 ```
 
-</div>
-
-### [Java Strings and JavaScript Strings](#java_strings_and_javascript_strings "Permalink to Java Strings and JavaScript Strings")
-
-<div>
+## Java Strings and JavaScript Strings
 
 It's important to keep in mind that Java strings and JavaScript strings are **not** the same. Java strings are instances of the type `java.lang.String` and have all the methods defined by that class. JavaScript strings have methods defined by `String.prototype`. The most common stumbling block is `length`, which is a method of Java strings and a dynamic property of JavaScript strings:
 
@@ -374,11 +351,7 @@ js> javaString.match(/a.*/)
 ava
 ```
 
-</div>
-
-### [JavaImporter Constructor](#javaimporter_constructor "Permalink to JavaImporter Constructor")
-
-<div>
+## JavaImporter Constructor
 
 `JavaImporter` is a new global constructor that allows to omit explicit package names when scripting Java:
 
@@ -403,11 +376,7 @@ Previously such functionality was available only to embeddings that used [`org.m
 
 See [Bugzilla 245882](http://bugzilla.mozilla.org/show_bug.cgi?id=245882) for details.
 
-</div>
-
-### [Java Exceptions](#java_exceptions "Permalink to Java Exceptions")
-
-<div>
+## Java Exceptions
 
 Exceptions thrown by Java methods can be caught by JavaScript code using [try...catch statement](/en-US/docs/JavaScript/Guide/Exception_Handling_Statements/try...catch_Statement "JavaScript/Guide/Exception_Handling_Statements/try...catch_Statement"). Rhino wraps Java exceptions into error objects with the following properties:
 
@@ -440,25 +409,3 @@ Rhino also supports an extension to the try...catch statement that allows to def
 classForName("NonExistingClass");
 classForName(null);
 ```
-
-</div>
-
-</article>
-
-<aside class="metadata">
-
-<div class="metadata-content-container">
-
-**Last modified:** <time datetime="2019-03-24T00:00:20.349Z">Mar 24, 2019</time>, [by MDN contributors](/en-US/docs/Mozilla/Projects/Rhino/Scripting_Java/contributors.txt)
-
-<form class="language-menu" form_signature="14283175368250166217">
-
-<fieldset id="select-language"><legend>Change your language</legend><label for="language-selector" class="visually-hidden">Select your preferred language</label> <select id="language-selector" name="language" field_signature="4249662115" form_signature="14283175368250166217"><option value="en-US">English (US)</option><option value="zh-CN">中文 (简体)</option></select> <button type="submit" class="button minimal">Change language</button></fieldset>
-
-</form>
-
-</div>
-
-</aside>
-
-</main>
