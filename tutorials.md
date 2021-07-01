@@ -1,7 +1,7 @@
 ---
 layout: default
-title: tutorials
-nav_order: 2
+title: Tutorials
+nav_order: 3
 has_children: true
 ---
 
