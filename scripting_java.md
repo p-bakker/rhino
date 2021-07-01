@@ -264,7 +264,8 @@ In the previous section we created Java adapters using the `new` operator with J
 
 The syntax of the `JavaAdapter` constructor is:
 
-```new JavaAdapter(javaIntfOrClass, [javaIntf, ..., javaIntf,] javascriptObject)
+```
+new JavaAdapter(javaIntfOrClass, [javaIntf, ..., javaIntf,] javascriptObject)
 ```
 
 Here `javaIntfOrClass` is an interface to implement or a class to extend and `javaIntf` are aditional interfaces to implement. The `javascriptObject` is the JavaScript object containing the methods that will be called from the Java adapter.
@@ -355,7 +356,8 @@ ava
 
 `JavaImporter` is a new global constructor that allows to omit explicit package names when scripting Java:
 
-<pre class="notranslate">var SwingGui = JavaImporter(Packages.javax.swing,
+```
+var SwingGui = JavaImporter(Packages.javax.swing,
                             Packages.javax.swing.event,
                             Packages.javax.swing.border,
                             java.awt.event,
@@ -385,7 +387,8 @@ Exceptions thrown by Java methods can be caught by JavaScript code using [try...
 
 The `instanceof` operator can be used to query the type of an exception:
 
-<pre class="notranslate">try {
+```
+try {
     java.lang.Class.forName("NonExistingClass");
 } catch (e) {
     if (e.javaException instanceof java.lang.ClassNotFoundException) {
@@ -396,7 +399,8 @@ The `instanceof` operator can be used to query the type of an exception:
 
 Rhino also supports an extension to the try...catch statement that allows to define conditional catching of exceptions:
 
-<pre class="notranslate">function classForName(name) {
+```
+function classForName(name) {
     try {
         return java.lang.Class.forName(name);
     } catch (e if e.javaException instanceof java.lang.ClassNotFoundException) {
