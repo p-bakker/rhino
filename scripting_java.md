@@ -164,7 +164,8 @@ The process of choosing a method to call based upon the types of the arguments i
 
 As an example, consider the following Java class that defines a number of overloaded methods and calls them.
 
-```public class Overload {
+```
+public class Overload {
 
     public String f(Object o) { return "f(Object)"; }
     public String f(String s) { return "f(String)"; }
@@ -184,14 +185,16 @@ As an example, consider the following Java class that defines a number of overlo
 
 When we compile and execute the program, it produces the output
 
-```f(Object)
+```
+f(Object)
 f(Object)
 f(Object)
 ```
 
 However, if we write a similar script
 
-```var o = new Packages.Overload();
+```
+var o = new Packages.Overload();
 var a = [ 3, "hi", Packages.Overload ];
 for (var i = 0; i != a.length; ++i)
     print(o.f(a[i]));
@@ -199,7 +202,8 @@ for (var i = 0; i != a.length; ++i)
 
 and execute it, we get the output
 
-```f(int)
+```
+f(int)
 f(String)
 f(Object)
 ```
