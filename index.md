@@ -1,3 +1,9 @@
+---
+layout: default
+title: Home
+nav_order: 1
+---
+
 # Rhino: JavaScript in Java
 
 ![Rhino](https://developer.mozilla.org/@api/deki/files/832/=Rhino.jpg)
