@@ -1,39 +1,52 @@
 # Scripting Java
+{: .no_toc }
+
+{: .fs-6 .fw-300 }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
 
 This article shows how to use Rhino to reach beyond JavaScript into Java. Scripting Java has many uses. It allows us to write powerful scripts quickly by making use of the many Java libraries available. We can test Java classes by writing scripts. We can also aid our Java development by using scripting for _exploratory programming_. Exploratory programming is the process of learning about what a library or API can do by writing quick programs that use it. As we will see, scripting makes this process easier.
 
 Note that the ECMA standard doesn't cover communication with Java (or with any external object system for that matter). All the functionality covered in this chapter should thus be considered an extension.
 
 
-### [Accessing Java Packages and Classes](#accessing_java_packages_and_classes "Permalink to Accessing Java Packages and Classes")
-
-<div>
-
+## [Accessing Java Packages and Classes
 Every piece of Java code is part of a class. Every Java class is part of a package. In JavaScript, however, scripts exist outside of any package hierarchy. How then, do we access classes in Java packages?
 
 Rhino defines a top-level variable named `Packages`. The properties of the `Packages` variable are all the top-level Java packages, such as `java` and `com`. For example, we can access the value of the `java`package:
 
-<pre class="code notranslate">js> Packages.java
-[JavaPackage java]</pre>
+```
+js> Packages.java
+[JavaPackage java]
+```
 
 As a handy shortcut, Rhino defines a top-level variable `java` that is equivalent to `Packages.java`. So the previous example could be even shorter:
 
-<pre class="code notranslate">js> java
+```
+js> java
 [JavaPackage java]
-</pre>
+```
 
 We can access Java classes simply by stepping down the package hierarchy:
 
-<pre class="code notranslate">js> java.io.File
+```
+js> java.io.File
 [JavaClass java.io.File]
-</pre>
+```
 
 If your scripts access a lot of different Java classes, it can get awkward to use the full package name of the class every time. Rhino provides a top-level function `importPackage` that serves the same purpose as Java's `import` declaration. For example, we could import all of the classes in the `java.io` package and access class `java.io.File` using just the name `File`:
 
-<pre class="code notranslate">js> importPackage(java.io)
+```
+js> importPackage(java.io)
 js> File
 [JavaClass java.io.File]
-</pre>
+```
 
 Here `importPackage(java.io)` makes all the classes in the `java.io` package (such as `File`) available at the top level. It's equivalent in effect to the Java declaration `import java.io.*;`.
 
@@ -41,9 +54,9 @@ It's important to note that Java imports `java.lang.*` implicitly, while Rhino d
 
 One thing to be careful of is Rhino's handling of errors in specifying Java package or class names. If `java.MyClass` is accessed, Rhino attempts to load a class named `java.MyClass`. If that load fails, it assumes that `java.MyClass` is a package name, and no error is reported:
 
-<pre class="code notranslate">js> java.MyClass
+```js> java.MyClass
 [JavaPackage java.MyClass]
-</pre>
+```
 
 Only if you attempt to use this object as a class will an error be reported.
 
@@ -51,29 +64,32 @@ Only if you attempt to use this object as a class will an error be reported.
 
 External packages and classes can also be used as in Rhino. Make sure your `.jar` or `.class` file is on you classpath then you may import them into your JavaScript application. These packages are likely not in the `java` package, so you'll need to prefix the package name with "`Packages.`" For example, to import the `org.mozilla.javascript` package you could use `importPackage()` as follows:
 
-<pre class="code notranslate">$ java org.mozilla.javascript.tools.shell.Main
+```
+$ java org.mozilla.javascript.tools.shell.Main
 js> importPackage(Packages.org.mozilla.javascript);
 js> Context.currentContext;
 org.mozilla.javascript.Context@bb6ab6
-</pre>
+```
 
 Occasionally, you will see examples that use the fully qualified name of the package instead of importing using the `importPackage()` method. This is also acceptable, it just takes more typing. Using a fully qualified name, the above example would look as follows:
 
-<pre class="code notranslate">$ java org.mozilla.javascript.tools.shell.Main
+```
+$ java org.mozilla.javascript.tools.shell.Main
 js> jsPackage = Packages.org.mozilla.javascript;
 [JavaPackage org.mozilla.javascript]
 js> jsPackage.Context.currentContext;
 org.mozilla.javascript.Context@bb6ab6
-</pre>
+```
 
 Alternatively, if you want to import just one class from a package you can do so using the `importClass()` method. The above examples could be expressed as follows:
 
-<pre class="notranslate">$ java org.mozilla.javascript.tools.shell.Main
+```
+$ java org.mozilla.javascript.tools.shell.Main
 js> importClass(Packages.org.mozilla.javascript.Context);
 js>  Context.currentContext;
-org.mozilla.javascript.Context@bb6ab6</pre>
+org.mozilla.javascript.Context@bb6ab6```
 
-</div>
+```
 
 ### [Working with Java](#working_with_java "Permalink to Working with Java")
 
@@ -81,60 +97,66 @@ org.mozilla.javascript.Context@bb6ab6</pre>
 
 Now that we can access Java classes, the next logical step is to create an object. This works just as in Java, with the use of the `new` operator:
 
-<pre class="code notranslate">js> new java.util.Date()
+```
+js> new java.util.Date()
 Thu Jan 24 16:18:17 EST 2002
-</pre>
+```
 
 If we store the new object in a JavaScript variable, we can then call methods on it:
 
-<pre class="code notranslate">js> f = new java.io.File("test.txt")
+```
+js> f = new java.io.File("test.txt")
 test.txt
 js> f.exists()
 true
 js> f.getName()
 test.txt
-</pre>
+```
 
 Static methods and fields can be accessed from the class object itself:
 
-<pre class="code notranslate">js> java.lang.Math.PI
+```
+js> java.lang.Math.PI
 3.141592653589793
 js> java.lang.Math.cos(0)
 1
-</pre>
+```
 
 In JavaScript, unlike Java, the method by itself is an object and can be evaluated as well as being called. If we just view the method object by itself we can see the various overloaded forms of the method:
 
-<pre class="code notranslate">js> f.listFiles
+```
+js> f.listFiles
 function listFiles() {/*
 java.io.File[] listFiles()
 java.io.File[] listFiles(java.io.FilenameFilter)
 java.io.File[] listFiles(java.io.FileFilter)
 */}
-</pre>
+```
 
 This output shows that the `File` class defines three overloaded methods `listFiles`: one that takes no arguments, another with a `FilenameFilter` argument, and a third with a `FileFilter` argument. All the methods return an array of `File` objects. Being able to view the parameters and return type of Java methods is particularly useful in exploratory programming where we might be investigating a method and are unsure of the parameter or return types.
 
 Another useful feature for exploratory programming is the ability to see all the methods and fields defined for an object. Using the JavaScript `for..in` construct, we can print out all these values:
 
-<pre class="code notranslate">js> for (i in f) { print(i) }
+```
+js> for (i in f) { print(i) }
 exists
 parentFile
 mkdir
 toString
 wait
 _[44 others]_
-</pre>
+```
 
 Note that not only the methods of the `File` class are listed, but also the methods inherited from the base class `java.lang.Object` (like `wait`). This makes it easier to work with objects in deeply nested inheritance hierarchies since you can see all the methods that are available for that object.
 
 Rhino provides another convenience by allowing properties of JavaBeans to be accessed directly by their property names. A JavaBean property `foo` is defined by the methods `getFoo` and `setFoo`. Additionally, a boolean property of the same name can be defined by an `isFoo` method. For example, the following code actually calls the `File` object's `getName` and `isDirectory` methods.
 
-<pre class="code notranslate">js> f.name
+```
+js> f.name
 test.txt
 js> f.directory
 false
-</pre>
+```
 
 </div>
 
@@ -146,7 +168,7 @@ The process of choosing a method to call based upon the types of the arguments i
 
 As an example, consider the following Java class that defines a number of overloaded methods and calls them.
 
-<pre class="code notranslate">public class Overload {
+```public class Overload {
 
     public String f(Object o) { return "f(Object)"; }
     public String f(String s) { return "f(String)"; }
@@ -162,29 +184,29 @@ As an example, consider the following Java class that defines a number of overlo
             System.out.println(o.f(a[i]));
     }
 }
-</pre>
+```
 
 When we compile and execute the program, it produces the output
 
-<pre class="code notranslate">f(Object)
+```f(Object)
 f(Object)
 f(Object)
-</pre>
+```
 
 However, if we write a similar script
 
-<pre class="code notranslate">var o = new Packages.Overload();
+```var o = new Packages.Overload();
 var a = [ 3, "hi", Packages.Overload ];
 for (var i = 0; i != a.length; ++i)
     print(o.f(a[i]));
-</pre>
+```
 
 and execute it, we get the output
 
-<pre class="code notranslate">f(int)
+```f(int)
 f(String)
 f(Object)
-</pre>
+```
 
 Because Rhino selects an overloaded method at runtime, it calls the more specific type that matches the argument. Meanwhile Java selects the overloaded method purely on the type of the argument at compile time.
 
@@ -192,13 +214,14 @@ Although this has the benefit of selecting a method that may be a better match f
 
 Because overload resolution occurs at runtime, it can fail at runtime. For example, if we call `Overload`'s method `g` with two integers we get an error because neither form of the method is closer to the argument types than the other:
 
-<pre class="code notranslate">js> o.g(3,4)
+```
+js> o.g(3,4)
 js:"<stdin>", line 2: The choice of Java method Overload.g
 matching JavaScript argument types (number,number) is ambiguous;
 candidate methods are:
 class java.lang.String g(java.lang.String,int)
 class java.lang.String g(int,java.lang.String)
-</pre>
+```
 
 See [Java Method Overloading and LiveConnect 3](http://web.archive.org/web/20110623074154/http://www.mozilla.org/js/liveconnect/lc3_method_overloading.html) for a more precise definition of overloading semantics.
 
@@ -212,28 +235,31 @@ Now that we can access Java classes, create Java objects, and access fields, met
 
 To address this need, Rhino provides the ability to create new Java objects that implement interfaces. First we must define a JavaScript object with function properties whose names match the methods required by the Java interface. To implement a `Runnable`, we need only define a single method `run` with no parameters. If you remember from Chapter 3, it is possible to define a JavaScript object with the `{propertyName: value}` notation. We can use that syntax here in combination with a function expression to define a JavaScript object with a `run` method:
 
-<pre class="code notranslate">js> obj = { run: function () { print("\nrunning"); } }
+```
+js> obj = { run: function () { print("\nrunning"); } }
 [object Object]
 js> obj.run()
 
 running
-</pre>
+```
 
 Now we can create an object implementing the `Runnable` interface by constructing a `Runnable`:
 
-<pre class="code notranslate">js> r = new java.lang.Runnable(obj);
+```
+js> r = new java.lang.Runnable(obj);
 [object JavaObject]
-</pre>
+```
 
 In Java it is not possible to use the `new` operator on an interface because there is no implementation available. Here Rhino gets the implementation from the JavaScript object `obj`. Now that we have an object implementing `Runnable`, we can create a `Thread` and run it. The function we defined for `run` will be called on a new thread.
 
-<pre class="code notranslate">js> t = new java.lang.Thread(r)
+```
+js> t = new java.lang.Thread(r)
 Thread[Thread-2,5,main]
 js> t.start()
 js>
 
 running
-</pre>
+```
 
 The final `js` prompt and the output from the new thread may appear in either order, depending on thread scheduling.
 
@@ -249,8 +275,8 @@ In the previous section we created Java adapters using the `new` operator with J
 
 The syntax of the `JavaAdapter` constructor is:
 
-<pre class="code notranslate">new JavaAdapter(javaIntfOrClass, [javaIntf, ..., javaIntf,] javascriptObject)
-</pre>
+```new JavaAdapter(javaIntfOrClass, [javaIntf, ..., javaIntf,] javascriptObject)
+```
 
 Here `javaIntfOrClass` is an interface to implement or a class to extend and `javaIntf` are aditional interfaces to implement. The `javascriptObject` is the JavaScript object containing the methods that will be called from the Java adapter.
 
@@ -266,16 +292,18 @@ Often we need to implement an interface with only one method, like in the previo
 
 Here is the simplified `Runnable` example:
 
-<pre class="code notranslate">js> t = java.lang.Thread(function () { print("\nrunning"); });
+```
+js> t = java.lang.Thread(function () { print("\nrunning"); });
 Thread[Thread-0,5,main]
 js> t.start()
 js>
 running
-</pre>
+```
 
 Rhino also allows use of JavaScript functions as implementations of Java interfaces with more than one method if all the methods have the same signature. When calling the function, Rhino passes the method's name as the additional argument. Function can use it to distinguish on behalf of which method it was called:
 
-<pre class="code notranslate">js> var frame = new Packages.javax.swing.JFrame();
+```
+js> var frame = new Packages.javax.swing.JFrame();
 js> frame.addWindowListener(function(event, methodName) {
 	if (methodName == "windowClosing") {
             print("Calling System.exit()..."); java.lang.System.exit(0);
@@ -285,7 +313,7 @@ js> frame.setSize(100, 100);
 js> frame.visible = true;
 true
 js> Calling System.exit()...
-</pre>
+```
 
 </div>
 
@@ -295,25 +323,28 @@ js> Calling System.exit()...
 
 Rhino provides no special syntax for creating Java arrays. You must use the `java.lang.reflect.Array` class for this purpose. To create an array of five Java strings you would make the following call:
 
-<pre class="code notranslate">js> a = java.lang.reflect.Array.newInstance(java.lang.String, 5);
+```
+js> a = java.lang.reflect.Array.newInstance(java.lang.String, 5);
 [Ljava.lang.String;@7ffe01
-</pre>
+```
 
 To create an array of primitive types, we must use the special TYPE field defined in the associated object class in the `java.lang` package. For example, to create an array of bytes, we must use the special field `java.lang.Byte.TYPE`:
 
-<pre class="code notranslate">js> a = java.lang.reflect.Array.newInstance(java.lang.Character.TYPE, 2);
+```
+js> a = java.lang.reflect.Array.newInstance(java.lang.Character.TYPE, 2);
 [C@7a84e4
-</pre>
+```
 
 The resulting value can then be used anywhere a Java array of that type is allowed.
 
-<pre class="code notranslate">js> a[0] = 104
+```
+js> a[0] = 104
 104
 js> a[1] = 105
 105
 js> new java.lang.String(a)
 hi
-</pre>
+```
 
 </div>
 
@@ -323,7 +354,8 @@ hi
 
 It's important to keep in mind that Java strings and JavaScript strings are **not** the same. Java strings are instances of the type `java.lang.String` and have all the methods defined by that class. JavaScript strings have methods defined by `String.prototype`. The most common stumbling block is `length`, which is a method of Java strings and a dynamic property of JavaScript strings:
 
-<pre class="code notranslate">js> javaString = new java.lang.String("Java")
+```
+js> javaString = new java.lang.String("Java")
 Java
 js> jsString = "JavaScript"
 JavaScript
@@ -331,15 +363,16 @@ js> javaString.length()
 4
 js> jsString.length
 10
-</pre>
+```
 
 Rhino provides some help in reducing the differences between the two types. First, you can pass a JavaScript string to a Java method that requires a Java string and Rhino will perform the conversion. We actually saw this feature in action on the call to the `java.lang.String` constructor in the preceding example.
 
 Rhino also makes the JavaScript methods available to Java strings if the java.lang.String class doesn't already define them. For example:
 
-<pre class="code notranslate">js> javaString.match(/a.*/)
+```
+js> javaString.match(/a.*/)
 ava
-</pre>
+```
 
 </div>
 
@@ -364,7 +397,7 @@ with (SwingGui) {
     var myframe = new JFrame();
 ...
 }
-</pre>
+```
 
 Previously such functionality was available only to embeddings that used [`org.mozilla.javascript.ImporterTopLevel`](http://www.mozilla.org/rhino/apidocs/org/mozilla/javascript/ImporterTopLevel.html) class as the top level scope. The class provides additional `importPackage()` and `importClass()` global functions for scripts but their extensive usage has tendency to pollute the global name space with names of Java classes and prevents loaded classes from garbage collection.
 
@@ -390,7 +423,7 @@ The `instanceof` operator can be used to query the type of an exception:
        print("Class not found");
     }
 }
-</pre>
+```
 
 Rhino also supports an extension to the try...catch statement that allows to define conditional catching of exceptions:
 
@@ -406,7 +439,7 @@ Rhino also supports an extension to the try...catch statement that allows to def
 
 classForName("NonExistingClass");
 classForName(null);
-</pre>
+```
 
 </div>
 
