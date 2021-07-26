@@ -6,8 +6,6 @@ nav_order: 1
 
 # Rhino: JavaScript in Java
 
-![Rhino](https://developer.mozilla.org/@api/deki/files/832/=Rhino.jpg)
-
 Rhino is an implementation of JavaScript in Java.
 
 ## License

@@ -1,0 +1,4 @@
+/* force grouped pages to always be expanded Needs further tweaks */
+.nav-list .nav-list-item.active>ul.nav-list {
+    display: block;
+}
