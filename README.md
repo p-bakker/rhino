@@ -1,6 +1,12 @@
-# Rhino [![License](https://img.shields.io/badge/license-MPL%202.0-blue.svg?style=for-the-badge)](./LICENSE.txt) [![CircleCI](https://img.shields.io/circleci/build/github/mozilla/rhino?logo=CircleCi&style=for-the-badge)](https://app.circleci.com/pipelines/github/mozilla/rhino) [![GitHub Actions](https://img.shields.io/github/workflow/status/mozilla/rhino/Rhino%20CI?logo=GitHub&style=for-the-badge)](https://github.com/mozilla/rhino/actions/workflows/gradle.yml) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](CONTRIBUTING.md)
+<h1 align=center>Rhino</h3>
+<p align=center>100% open source JavaScript engine implemented in pure Java</p>
 
-Rhino - a 100% open source JavaScript engine implemented in pure Java
+<p align="center">
+  <a href="./LICENSE.txt"><img src="https://img.shields.io/badge/license-MPL%202.0-blue.svg?style=for-the-badge" alt="License"></a>
+  <a href="https://app.circleci.com/pipelines/github/mozilla/rhino"><img src="https://img.shields.io/circleci/build/github/mozilla/rhino?logo=CircleCi&style=for-the-badge" alt="CircleCI"></a>
+  <a href="https://github.com/mozilla/rhino/actions/workflows/gradle.yml"><img src="https://img.shields.io/github/workflow/status/mozilla/rhino/Rhino%20CI?logo=GitHub&style=for-the-badge" alt="GitHub Actions"></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome"></a>
+</p>
 
 ## Why Rhino?
 - A JavaScript REPL, through the bundled shell
@@ -17,8 +23,8 @@ Rhino - a 100% open source JavaScript engine implemented in pure Java
 
 [Compatibility table](http://mozilla.github.io/rhino/compat/engines.html) which shows which advanced JavaScript features from ES6, and ES2016+ are implemented in Rhino.
 
-## Getting started
-Rhino is used is many different ways, from a command line utility, to a Scripting Engine (conforming to to JSR 223) used in Ant, to an embedded customization layer in Java applications and so forth
+## Quick start
+
 
 ## Documentation
 Rhino's documentation is available on [mozilla.github.io/rhino]
