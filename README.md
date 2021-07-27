@@ -1,5 +1,5 @@
 <h1 align=center>Rhino</h3>
-<p align=center>100% open source JavaScript engine implemented in pure Java</p>
+<p align=center>the 100% open source JavaScript engine implemented in pure Java</p>
 
 <p align="center">
   <a href="./LICENSE.txt"><img src="https://img.shields.io/badge/license-MPL%202.0-blue.svg?style=for-the-badge" alt="License"></a>
