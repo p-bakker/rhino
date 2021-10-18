@@ -1,14 +1,13 @@
 title: Rhino
 description: Rhino is an open-source implementation of JavaScript written entirely in Java
-google_analytics: 
 show_downloads: true
 remote_theme: pmarsceill/just-the-docs
 aux_links:
   "Rhino on GitHub":
     - "//github.com/mozilla/rhino"
 
-#plugins:
-#  - jekyll-mentions
+gem:
+  - jekyll-mentions
 #  - jekyll-redirect-from
 
 collections:
