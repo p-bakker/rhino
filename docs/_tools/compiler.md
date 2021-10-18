@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Compiler
-parent: Tools
 ---
 # Scripting Java
 {: .no_toc }

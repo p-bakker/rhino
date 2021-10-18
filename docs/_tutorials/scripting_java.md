@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Scripting Java
-parent: Tutorials
 ---
 # Scripting Java
 {: .no_toc }

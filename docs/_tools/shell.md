@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Debugger
-parent: Tools
+title: Shell
 ---
 # Scripting Java
 {: .no_toc }

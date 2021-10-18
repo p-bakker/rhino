@@ -4,8 +4,30 @@ google_analytics:
 show_downloads: true
 remote_theme: pmarsceill/just-the-docs
 logo: "/assets/images/rhino.png"
+
 aux_links:
   "Rhino on GitHub":
     - "//github.com/mozilla/rhino"
+
 gems:
   - jekyll-mentions
+
+collections:
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+  tutorials:
+    permalink: "/:collection/:path/"
+    output: true
+  tools:
+    permalink: "/:collection/:path/"
+    output: true
+    
+just_the_docs:
+  collections:
+    docs:
+      name: Documentation
+    tutorials:
+      name: Tutorials
+    tools:
+      name: Tools
