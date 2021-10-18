@@ -1,6 +1,6 @@
 ---
 layout: default
-title: New in Rhino 1.7R2
+title: "New in Rhino 1.7R2"
 ---
 # New in Rhino 1.7R2
 {: .no_toc }

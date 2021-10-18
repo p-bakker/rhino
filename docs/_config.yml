@@ -7,8 +7,9 @@ aux_links:
   "Rhino on GitHub":
     - "//github.com/mozilla/rhino"
 
-plugins:
-  - jekyll-mentions
+#plugins:
+#  - jekyll-mentions
+#  - jekyll-redirect-from
 
 collections:
   docs:
