@@ -6,9 +6,10 @@ remote_theme: pmarsceill/just-the-docs
 aux_links:
   "Rhino on GitHub":
     - "//github.com/mozilla/rhino"
+
 plugins:
   - jekyll-mentions
-  - jekyll-redirect-from
+
 collections:
   docs:
     permalink: "/:collection/:path/"
@@ -19,7 +20,7 @@ collections:
   tools:
     permalink: "/:collection/:path/"
     output: true
-    
+
 just_the_docs:
   collections:
     docs:
