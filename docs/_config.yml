@@ -3,7 +3,6 @@ description: Rhino is an open-source implementation of JavaScript written entire
 google_analytics: 
 show_downloads: true
 remote_theme: pmarsceill/just-the-docs
-logo: "/assets/images/rhino.png"
 
 aux_links:
   "Rhino on GitHub":
