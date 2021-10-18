@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tutorial: Embedding Rhino
+title: "Tutorial: Embedding Rhino"
 ---
 # Tutorial: Embedding Rhino
 {: .no_toc }
