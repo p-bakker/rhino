@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino community
+title: "Rhino community"
 ---
 # Rhino community
 {: .no_toc }
@@ -14,15 +13,15 @@ title: Rhino community
 {:toc}
 
 ---
-Have a question that you can't find answer to in the (Rhino documentation)[Documentation]? Here are some additional resources for help:
+Have a question that you can't find answer to in the (Rhino documentation)[/en-US/docs/Mozilla/Projects/Rhino/Documentation]? Here are some additional resources for help:
 
 #### Mailing List
 
 Rhino discussions happen on the (mozilla-rhino)[https://groups.google.com/group/mozilla-rhino] group on Google Groups.
 
-There is a much older group, (mozilla.dev.tech.js-engine.rhino)[], that is no longer actively used. Please use the new group instead, but the old one may be of historical interest.
+There is a much older group, (mozilla.dev.tech.js-engine.rhino)[news://news.mozilla.org/mozilla.dev.tech.js-engine.rhino], that is no longer actively used. Please use the new group instead, but the old one may be of historical interest.
 
-The (mozilla.dev.tech.js-engine)[] newsgroup answers questions about the C implementation of JavaScript, and was also used for answering questions about Rhino until September 27, 2007. To view archived messages _earlier than_ September 27, 2007, try (Google group for the earlier newsgroup)[https://groups.google.com/group/mozilla.dev.tech.js-engine/topics].
+The (mozilla.dev.tech.js-engine)[news://news.mozilla.org/mozilla.dev.tech.js-engine] newsgroup answers questions about the C implementation of JavaScript, and was also used for answering questions about Rhino until September 27, 2007. To view archived messages _earlier than_ September 27, 2007, try (Google group for the earlier newsgroup)[https://groups.google.com/group/mozilla.dev.tech.js-engine/topics].
 
 #### Bug System
 

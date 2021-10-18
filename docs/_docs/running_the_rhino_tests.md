@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Running the Rhino tests
+title: "Running the Rhino tests"
 ---
 # Running the Rhino tests
 {: .no_toc }
@@ -14,7 +13,7 @@ title: Running the Rhino tests
 {:toc}
 
 ---
-To run the (Rhino)[http://base.uri/en/Rhino] tests, simply run the `junit-all` Ant task in the top-level Rhino directory:
+To run the (Rhino)[/en/Rhino] tests, simply run the `junit-all` Ant task in the top-level Rhino directory:
 
 ```
 $ cd rhino

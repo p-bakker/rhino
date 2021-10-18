@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Scripting Java
+title: "Scripting Java"
 ---
 # Scripting Java
 {: .no_toc }
@@ -384,9 +383,10 @@ See (Bugzilla 245882)[http://bugzilla.mozilla.org/show_bug.cgi?id=245882] for de
 
 ### Java Exceptions
 
-Exceptions thrown by Java methods can be caught by JavaScript code using (try...catch statement)[http://base.uri/en-US/docs/JavaScript/Guide/Exception_Handling_Statements/try...catch_Statement]. Rhino wraps Java exceptions into error objects with the following properties:
+Exceptions thrown by Java methods can be caught by JavaScript code using (try...catch statement)[/en-US/docs/JavaScript/Guide/Exception_Handling_Statements/try...catch_Statement]. Rhino wraps Java exceptions into error objects with the following properties:
 
-- `javaException`: the original exception thrown by the Java method- `rhinoException`: the exception wrapped by the Rhino runtime
+- `javaException`: the original exception thrown by the Java method
+- `rhinoException`: the exception wrapped by the Rhino runtime
 
 The `instanceof` operator can be used to query the type of an exception:
 

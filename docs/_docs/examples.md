@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino Examples
+title: "Rhino Examples"
 ---
 # Rhino Examples
 {: .no_toc }
@@ -28,7 +27,7 @@ The `(checkParam.js)[https://github.com/mozilla/rhino/tree/master/examples/check
 
 The `(enum.js)[https://github.com/mozilla/rhino/tree/master/examples/enum.js]` script is a good example of using a JavaAdapter to implement a Java interface using a JavaScript object.
 
-The (NervousText.js)[https://github.com/mozilla/rhino/tree/master/examples/NervousText.js] script is a JavaScript implementation of the famous NervousText applet using JavaScript compiled to Java classes using (jsc)[http://base.uri/jsc.html]. It can be run in the HTML page (NervousText.html)[https://github.com/mozilla/rhino/tree/master/examples/NervousText.html].
+The (NervousText.js)[https://github.com/mozilla/rhino/tree/master/examples/NervousText.js] script is a JavaScript implementation of the famous NervousText applet using JavaScript compiled to Java classes using (jsc)[jsc.html]. It can be run in the HTML page (NervousText.html)[https://github.com/mozilla/rhino/tree/master/examples/NervousText.html].
 
 ## (Controlling the JavaScript Engine)[]
 
@@ -54,7 +53,7 @@ The (NervousText.js)[https://github.com/mozilla/rhino/tree/master/examples/Nervo
 
 ## Implementing Host Objects
 
-First check out the (tutorial)[http://base.uri/en/docs/Rhino/Embedding_tutorial] if you haven't already.
+First check out the (tutorial)[/en/docs/Rhino/Embedding_tutorial] if you haven't already.
 
 #### The Foo class - Extending ScriptableObject
 

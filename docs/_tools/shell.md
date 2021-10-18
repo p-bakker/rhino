@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino shell
+title: "Rhino shell"
 ---
 # Rhino shell
 {: .no_toc }
@@ -18,25 +17,25 @@ The JavaScript shell provides a simple way to run scripts in batch mode or an in
 
 ### Invoking the Shell
 
-`java org.mozilla.javascript.tools.shell.Main [options] script-filename-or-url [script-arguments]`
+`java org.mozilla.javascript.tools.shell.Main [_options_] _script-filename-or-url_ [_script-arguments_]`
 
-where `options` are:
+where `_options_` are:
 
-#### `-e script-source`
+#### `-e _script-source_`
 
-Executes script-source as a JavaScript script.
+Executes _script-source_ as a JavaScript script.
 
-#### `-f script-filename-or-url`
+#### `-f _script-filename-or-url_`
 
-Reads script-filename-or-url content and execute it as a JavaScript script.
+Reads _script-filename-or-url_ content and execute it as a JavaScript script.
 
-#### `-opt optLevel` / `-O optLevel`
+#### `-opt _optLevel_` / `-O _optLevel_`
 
-Optimizes at level optLevel, which must be `-1` or an integer between `0` and `9`. See (Rhino Optimization)[Optimization] for more details.
+Optimizes at level _optLevel_, which must be `-1` or an integer between `0` and `9`. See (Rhino Optimization)[/en-US/docs/Mozilla/Projects/Rhino/Optimization] for more details.
 
-#### `-version versionNumber`
+#### `-version _versionNumber_`
 
-Specifies the language version to compile with. The string versionNumber must be one of `100`, `110`, `120`, `130`, `140`, `150`, `160 or 170`. See (JavaScript Language Versions)[Overview#JavaScript_Language_Versions] for more information on language versions.
+Specifies the language version to compile with. The string _versionNumber_ must be one of `100`, `110`, `120`, `130`, `140`, `150`, `160 or 170`. See (JavaScript Language Versions)[/en-US/docs/Mozilla/Projects/Rhino/Overview#JavaScript_Language_Versions] for more information on language versions.
 
 #### `-strict`
 
@@ -70,11 +69,11 @@ Displays the shell command history.
 
 Executing the `help` function will print usage and help messages.
 
-#### `defineClass(className)`
+#### `defineClass(_className_)`
 
-Define an extension using the Java class named with the string argument className. Uses `ScriptableObject.defineClass()` to define the extension.
+Define an extension using the Java class named with the string argument _className_. Uses `ScriptableObject.defineClass()` to define the extension.
 
-#### `deserialize(filename)`
+#### `deserialize(_filename_)`
 
 Restore from the specified file an object previously written by a call to `serialize`.
 
@@ -82,27 +81,27 @@ Restore from the specified file an object previously written by a call to `seria
 
 Runs the garbage collector.
 
-#### `load([filename, ...])`
+#### `load([_filename_, ...])`
 
 Load JavaScript source files named by string arguments. If multiple arguments are given, each file is read in and executed in turn.
 
-#### `loadClass(className)`
+#### `loadClass(_className_)`
 
-Load and execute the class named by the string argument className. The class must be a class that implements the Script interface, as will any script compiled by (Rhino JavaScript Compiler)[JavaScript_Compiler].
+Load and execute the class named by the string argument _className_. The class must be a class that implements the Script interface, as will any script compiled by (Rhino JavaScript Compiler)[/en-US/docs/Mozilla/Projects/Rhino/JavaScript_Compiler].
 
-#### `print([expr ...])`
+#### `print([_expr_ ...])`
 
 Evaluate and print expressions. Evaluates each expression, converts the result to a string, and prints it.
 
-#### `readFile(path [, characterCoding])`
+#### `readFile(_path_ [, _characterCoding]_)`
 
 Read given file and convert its bytes to a string using the specified character coding or default character coding if explicit coding argument is not given.
 
-#### `readUrl(url [, characterCoding])`
+#### `readUrl(_url_ [, _characterCoding_])`
 
 Open an input connection to the given string url, read all its bytes and convert them to a string using the specified character coding or default character coding if explicit coding argument is not given.
 
-#### `runCommand(commandName, [arg, ...] [options])`
+#### `runCommand(_commandName_, [_arg_, ...] [_options_])`
 
 Execute the specified command with the given argument and options as a separate process and return the exit status of the process.
 
@@ -118,21 +117,25 @@ All except the last arguments to `runCommand` are converted to strings and denot
 
 The following properties of the option object are processed:
 
-- `args` - provides an array of additional command arguments- `env` - explicit environment object. All its enumeratable properties define the corresponding environment variable names.- `input` - the process input. If it is not `java.io.InputStream`, it is converted to string and sent to the process as its input. If not specified, no input is provided to the process.- `output` - the process output instead of `java.lang.System.out`. If it is not instance of `java.io.OutputStream`, the process output is read, converted to a string, appended to the output property value converted to string and put as the new value of the output property.- `err` - the process error output instead of `java.lang.System.err`. If it is not instance of `java.io.OutputStream`, the process error output is read, converted to a string, appended to the err property value converted to string and put as the new value of the err property.
+- `args` - provides an array of additional command arguments
+- `env` - explicit environment object. All its enumeratable properties define the corresponding environment variable names.
+- `input` - the process input. If it is not `java.io.InputStream`, it is converted to string and sent to the process as its input. If not specified, no input is provided to the process.
+- `output` - the process output instead of `java.lang.System.out`. If it is not instance of `java.io.OutputStream`, the process output is read, converted to a string, appended to the output property value converted to string and put as the new value of the output property.
+- `err` - the process error output instead of `java.lang.System.err`. If it is not instance of `java.io.OutputStream`, the process error output is read, converted to a string, appended to the err property value converted to string and put as the new value of the err property.
 
-#### `seal(object)`
+#### `seal(_object_)`
 
 Seal the specified object so any attempt to add, delete or modify its properties would throw an exception.
 
-#### `serialize(object, filename)`
+#### `serialize(_object_, _filename_)`
 
 Serialize the given object to the specified file.
 
-#### `spawn(functionOrScript)`
+#### `spawn(_functionOrScript_)`
 
 Run the given function or script in a different thread.
 
-#### `sync(function)`
+#### `sync(_function_)`
 
 creates a synchronized function (in the sense of a Java `synchronized` method) from an existing function. The new function synchronizes on the `this` object of its invocation.
 
@@ -140,7 +143,7 @@ creates a synchronized function (in the sense of a Java `synchronized` method) f
 
 Quit shell. The shell will also quit in interactive mode if an end-of-file character is typed at the prompt.
 
-#### `version([number])`
+#### `version([_number_])`
 
 Get or set JavaScript version number. If no argument is supplied, the current version number is returned. If an argument is supplied, it is expected to be one of `100`, `110`, `120`, `130`, `140`, `150`, `160 or 170` to indicate JavaScript version 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 or 1.7 respectively.
 

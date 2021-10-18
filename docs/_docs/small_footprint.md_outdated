@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Small footprint
+title: "Small footprint"
 ---
 # Small footprint
 {: .no_toc }
@@ -54,4 +53,6 @@ Ant build script in Rhino supports smalljar target that will generate cite: <cit
 
 If you omit `-Dno-regexp=true`, then the resulting cite: <cite>smalljs.jar</cite> will include regular expression support. Similarly omitting `-Dno-e4x=true` results in cite: <cite>smalljs.jar</cite> that includes runtime support for E4X.
 
-## Original Document Information- Author: (Norris Boyd)[mailto:norrisboyd@gmail.com]- Last Updated Date: November 16, 2006- Copyright Information: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license | (Details)[http://www.mozilla.org/foundation/licensing/website-content.html].
+## Original Document Information- Author: (Norris Boyd)[mailto:norrisboyd@gmail.com]
+- Last Updated Date: November 16, 2006
+- Copyright Information: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license | (Details)[http://www.mozilla.org/foundation/licensing/website-content.html].

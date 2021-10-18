@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino history
+title: "Rhino history"
 ---
 # Rhino history
 {: .no_toc }
@@ -26,6 +25,8 @@ Rhino was released to mozilla.org in April of 1998. Originally Rhino classfile g
 
 ## See also
 
-(Rhino users)[http://base.uri/en/Rhino/Users]
+(Rhino users)[/en/Rhino/Users]
 
-## Original Document Information- Author: (Norris Boyd)[mailto:norrisboyd@gmail.com]- Last Updated Date: November 18, 2006- Copyright Information: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license | (Details)[http://www.mozilla.org/foundation/licensing/website-content.html].
+## Original Document Information- Author: (Norris Boyd)[mailto:norrisboyd@gmail.com]
+- Last Updated Date: November 18, 2006
+- Copyright Information: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license | (Details)[http://www.mozilla.org/foundation/licensing/website-content.html].

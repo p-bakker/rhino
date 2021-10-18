@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino license
+title: "Rhino license"
 ---
 # Rhino license
 {: .no_toc }
@@ -55,4 +54,6 @@ Additionally, some files (currently the contents of toolsrc/org/mozilla/javascri
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
-(Norrisboyd)[http://base.uri/User:Norrisboyd] 06:16, 14 April 2008 (PDT)
+---
+
+(Norrisboyd)[/User:Norrisboyd] 06:16, 14 April 2008 (PDT)

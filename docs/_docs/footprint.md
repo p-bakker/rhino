@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Small Footprint
+title: "Small Footprint"
 ---
 # Small Footprint
 {: .no_toc }
@@ -31,7 +30,7 @@ Most embeddings won't need any of the classes in
 
 It is possible to run Rhino with interpreter mode only, allowing
 you to remove code for classfile generation that include all
-the classes from <tt>org.mozilla.javascript.optimizer</tt> package.
+the classes from `org.mozilla.javascript.optimizer` package.
 
 ## JavaAdapter
 

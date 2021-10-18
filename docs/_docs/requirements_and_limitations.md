@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino requirements and limitations
+title: "Rhino requirements and limitations"
 ---
 # Rhino requirements and limitations
 {: .no_toc }

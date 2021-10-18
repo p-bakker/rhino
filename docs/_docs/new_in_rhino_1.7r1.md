@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "New in Rhino 1.7R1"
 ---
 # New in Rhino 1.7R1
@@ -18,9 +17,12 @@ Rhino 1.7R1 is a major feature release.
 
 ## JavaScript 1.7 features
 
-As of Rhino1.7R1, Rhino now supports the features of JavaScript 1.7. See (New in JavaScript 1.7)[http://base.uri/en/New_in_JavaScript_1.7]. JavaScript 1.7 supports the following features:
+As of Rhino1.7R1, Rhino now supports the features of JavaScript 1.7. See (New in JavaScript 1.7)[en/New_in_JavaScript_1.7]. JavaScript 1.7 supports the following features:
 
-- Generators and iterators- Array comprehensions- Block scope with let- Destructuring assignment
+- Generators and iterators
+- Array comprehensions
+- Block scope with let
+- Destructuring assignment
 
 To enable JavaScript 1.7 support, you must set the version as 170 using the `Context.setLanguageVersion()` API call. If you are using the Rhino shell, you can specify `-version 170` on the command line or call `version(170)` in code executed by the shell.
 
@@ -49,14 +51,14 @@ As of Rhino 1.7R1, the E4X implementation based on DOM3 is now preferred over th
 
 ## Support for JDK 1.4 through separate JAR file
 
-We now require at least JDK 1.5 in order to compile Rhino sources. As a result, the <tt>js.jar</tt> in the binary distribution is not runnable with JDK 1.4. In order to support people running Rhino on JDK 1.4, we use (Retrotranslator)[http://retrotranslator.sourceforge.net] to produce <tt>js-14.jar</tt>, which is compatible with JDK 1.4. <tt>js-14.jar</tt> is also in the binary distribution and can be built from source using ant.
+We now require at least JDK 1.5 in order to compile Rhino sources. As a result, the `js.jar` in the binary distribution is not runnable with JDK 1.4. In order to support people running Rhino on JDK 1.4, we use (Retrotranslator)[http://retrotranslator.sourceforge.net] to produce `js-14.jar`, which is compatible with JDK 1.4. `js-14.jar` is also in the binary distribution and can be built from source using ant.
 JDK 1.4 support will be dropped entirely from Rhino in a future release.
 
 ## Support for instruction threshold callbacks in compiled mode
 
 It's now possible to request instruction callbacks for compiled scripts. This is primarily used to enforce instruction quotas for untrusted scripts. See (bug 397680)[https://bugzilla.mozilla.org/show_bug.cgi?id=397680].
 
-## <tt>debugger</tt> keyword
+## `debugger` keyword
 
 Fix (bug 386997)[https://bugzilla.mozilla.org/show_bug.cgi?id=386997] - Need to support 'debugger' statement
 Adding the 'debugger' keyword will now result in a breakpoint being hit when
@@ -69,7 +71,7 @@ Prior to 1.7R1, Java classes in packages starting with "java." could be referenc
 
 ## Array and String generics
 
-See (New in JavaScript 1.6)[http://base.uri/en/New_in_JavaScript_1.6]. This feature is now implemented in Rhino.
+See (New in JavaScript 1.6)[en/New_in_JavaScript_1.6]. This feature is now implemented in Rhino.
 
 ## Configurable prompts in the shell
 
@@ -102,9 +104,11 @@ js> var prompts = [">>> ", "... "];
 
 Well, this isn't a feature, but to ensure we're not shipping binaries built from sources that are not available under an open source license, you must download some source files and build the debugger yourself. Here's how to do it:
 
-- <tt>unzip rhino1_7R1.zip</tt>- <tt>cd rhino1_7R1</tt>- <tt>ant compile-debugger</tt>
+- `unzip rhino1_7R1.zip`
+- `cd rhino1_7R1`
+- `ant compile-debugger`
 
-Now <tt>js.jar</tt> contains the sources needed to run the debugger:
+Now `js.jar` contains the sources needed to run the debugger:
 
 ```
 java -cp js.jar org.mozilla.javascript.tools.debugger.Main test.js
@@ -112,6 +116,6 @@ java -cp js.jar org.mozilla.javascript.tools.debugger.Main test.js
 
 And if anyone would like to contribute changes that allow us to build the debugger without depending on these closed-source licenses, we'd be happy to take those changes into Rhino.
 
-<hr>
+---
 
 (Norrisboyd)[] 07:03, 13 June 2007 (PDT)

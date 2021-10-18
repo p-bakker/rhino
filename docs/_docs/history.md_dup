@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino history
+title: "Rhino history"
 ---
 # Rhino history
 {: .no_toc }
@@ -22,4 +21,4 @@ Originally, Rhino compiled all JavaScript code to Java bytecodes in generated cl
 
 So in fall of 1998, Rhino added an interpretive mode. The classfile generation code was moved to an optional, dynamically-loaded package. Compilation is faster and when scripts are no longer in use they can be collected like any other Java object.
 
-Rhino was released to mozilla.org in April 1998. Originally Rhino classfile generation had been held back from release. However the licensees of Rhino have now agreed to release all of Rhino to open source, including class file generation. Since its release to open source, Rhino has found a variety of (uses)[http://base.uri/users.html] and an increasing number of people have contributed to the code.
+Rhino was released to mozilla.org in April 1998. Originally Rhino classfile generation had been held back from release. However the licensees of Rhino have now agreed to release all of Rhino to open source, including class file generation. Since its release to open source, Rhino has found a variety of (uses)[users.html] and an increasing number of people have contributed to the code.

@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino FAQ
+title: "Rhino FAQ"
 ---
 # Rhino FAQ
 {: .no_toc }

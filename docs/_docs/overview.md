@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino overview
+title: "Rhino overview"
 ---
 # Rhino overview
 {: .no_toc }
@@ -16,11 +15,15 @@ title: Rhino overview
 ---
 ### Introduction
 
-Most people who have used (JavaScript)[http://base.uri/en-US/docs/Web/JavaScript] before have done so by adding scripts to their (HTML)[http://base.uri/en-US/docs/Glossary/HTML] web pages. However, Rhino is an implementation of the core language only and doesn't contain objects or methods for manipulating HTML documents.
+Most people who have used (JavaScript)[/en-US/docs/Web/JavaScript] before have done so by adding scripts to their (HTML)[/en-US/docs/Glossary/HTML] web pages. However, Rhino is an implementation of the core language only and doesn't contain objects or methods for manipulating HTML documents.
 
 Rhino contains
 
-- All the features of (JavaScript 1.7)[http://base.uri/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7]- Allows direct scripting of Java- (A JavaScript shell)[Shell] for executing JavaScript scripts- (A JavaScript compiler)[JavaScript_Compiler] to transform JavaScript source files into Java class files- (A JavaScript debugger)[Debugger] for scripts executed with Rhino
+- All the features of (JavaScript 1.7)[/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7]
+- Allows direct scripting of Java
+- (A JavaScript shell)[/en-US/docs/Mozilla/Projects/Rhino/Shell] for executing JavaScript scripts
+- (A JavaScript compiler)[/en-US/docs/Mozilla/Projects/Rhino/JavaScript_Compiler] to transform JavaScript source files into Java class files
+- (A JavaScript debugger)[/en-US/docs/Mozilla/Projects/Rhino/Debugger] for scripts executed with Rhino
 
 ### Language
 
@@ -60,7 +63,7 @@ Version 1.2 only returns array or object literal notation (`"[1]"` or `"{a:1, b:
 
 #### `Array` constructor
 
-`Array(i)` for a number argument i constructs an array with a single element equal to i for version 1.2 only. Otherwise the ECMA conformant version is used (an array is constructed with no elements but with `length` property equal to i).
+`Array(_i_)` for a number argument _i_ constructs an array with a single element equal to _i_ for version 1.2 only. Otherwise the ECMA conformant version is used (an array is constructed with no elements but with `length` property equal to _i_).
 
 #### `String.prototype.substring`
 

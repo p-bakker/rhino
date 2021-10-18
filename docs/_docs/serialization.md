@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino serialization
+title: "Rhino serialization"
 ---
 # Rhino serialization
 {: .no_toc }
@@ -36,7 +35,7 @@ Two new classes, `ScriptableOutputStream` and `ScriptableInputStream`, were intr
 `FileOutputStream fos = new FileOutputStream(filename);``ScriptableOutputStream out = new ScriptableOutputStream(fos, scope);``out.writeObject(obj);``out.close();`
 ```
 
-Here filename is the file to write to, obj is the object or function to write, and scope is the top-level scope containing obj.
+Here _filename_ is the file to write to, _obj_ is the object or function to write, and _scope_ is the top-level scope containing _obj_.
 
 Reading the serialized object back into memory is similarly simple:
 
@@ -56,7 +55,7 @@ However, for JavaScript this creates a problem. JavaScript objects contain refer
 
 `ScriptableOutputStream` takes a scope as a parameter to its constructor. If in the process of serialization it encounters a reference to the scope it will serialize a marker that will be resolved to the new scope upon deserialization. It is also possible to add names of objects to a list in the `ScriptableOutputStream` object. These objects will also be saved as markers upon serialization and resolved in the new scope upon deserialization. Use the addExcludedName method of `ScriptableOutputStream` to add new names. By default, `ScriptableOutputStream` excludes all the names defined using `Context.initStandardObjects`.
 
-If you are using Rhino serialization in an environment where you always define, say, a constructor Foo, you should add the following code before calling `writeObject`:
+If you are using Rhino serialization in an environment where you always define, say, a constructor _Foo_, you should add the following code before calling `writeObject`:
 
 ```
 `out.addExcludedName("Foo");``out.addExcludedName("Foo.prototype");`
@@ -89,6 +88,8 @@ org.mozilla.javascript.tools.jsc.Main f.js``$``cat test2.js``loadClass("f");
 org.mozilla.javascript.tools.shell.Main test2.js``3`
 ```
 
-Now the function f is compiled to a Java class, but that class is then made available in the classpath so serialization works. This isn't that interesting an example since compiling a function to a class and then loading it accomplishes the same as serializing an interpreted function, but it becomes more relevant if you wish to serialize JavaScript objects that have references to compiled functions.
+Now the function _f_ is compiled to a Java class, but that class is then made available in the classpath so serialization works. This isn't that interesting an example since compiling a function to a class and then loading it accomplishes the same as serializing an interpreted function, but it becomes more relevant if you wish to serialize JavaScript objects that have references to compiled functions.
 
-## Original Document Information- Author: (Norris Boyd)[mailto:norrisboyd@gmail.com]- Last Updated Date: November 15, 2006- Copyright Information: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license | (Details)[http://www.mozilla.org/foundation/licensing/website-content.html].
+## Original Document Information- Author: (Norris Boyd)[mailto:norrisboyd@gmail.com]
+- Last Updated Date: November 15, 2006
+- Copyright Information: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license | (Details)[http://www.mozilla.org/foundation/licensing/website-content.html].

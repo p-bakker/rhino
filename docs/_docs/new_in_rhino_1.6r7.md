@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "New in Rhino 1.6R7"
 ---
 # New in Rhino 1.6R7
@@ -14,7 +13,7 @@ title: "New in Rhino 1.6R7"
 {:toc}
 
 ---
-Rhino 1.6R7 is a minor bug fix release following the major feature release (Rhino 1.6R6)[http://base.uri/en/New_in_Rhino_1.6R6].
+Rhino 1.6R7 is a minor bug fix release following the major feature release (Rhino 1.6R6)[en/New_in_Rhino_1.6R6].
 The following bugs have been fixed:
 
 

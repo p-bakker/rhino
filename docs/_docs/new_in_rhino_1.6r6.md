@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "New in Rhino 1.6R6"
 ---
 # New in Rhino 1.6R6
@@ -26,7 +25,15 @@ See (Tackling JavaScript strict warnings)[http://www.javascriptkit.com/javatutor
 
 Briefly, Rhino reports warnings in strict mode for
 
-- assignments to undefined variables- references to undefined properties- inconsistent return statements in a function- duplicate parameter names- variables that hide parameters- assignment in a conditional (_Note: you can suppress this warning by including an extra set of parentheses around the assignment_)- trailing comma in object initializer (_Note: this is always a full error in Rhino_)- indirect calls to eval- useless expressions
+- assignments to undefined variables
+- references to undefined properties
+- inconsistent return statements in a function
+- duplicate parameter names
+- variables that hide parameters
+- assignment in a conditional (_Note: you can suppress this warning by including an extra set of parentheses around the assignment_)
+- trailing comma in object initializer (_Note: this is always a full error in Rhino_)
+- indirect calls to eval
+- useless expressions
 
 To enable strict mode for the Rhino shell, add `-strict` to the command line. If you are using the API directly, set the Context feature `FEATURE_STRICT_MODE`.
 
@@ -36,11 +43,11 @@ See (bug 378790)[https://bugzilla.mozilla.org/show_bug.cgi?id=378790] for nitty 
 
 ### JavaScript 1.5: Getters and Setters
 
-See (Defining Getters and Setters)[http://base.uri/en-US/docs/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters] in the JavaScript 1.5 Reference.
+See (Defining Getters and Setters)[/en-US/docs/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters] in the JavaScript 1.5 Reference.
 
 ### JavaScript 1.5: `const` keyword
 
-See (const)[http://base.uri/en-US/docs/JavaScript/Reference/Statements/const] in the JavaScript 1.5 Reference.
+See (const)[/en-US/docs/JavaScript/Reference/Statements/const] in the JavaScript 1.5 Reference.
 
 ## New E4X Implementation using Java 1.5 DOM
 
@@ -54,7 +61,7 @@ Rhino 1.6R6 adds org.mozilla.javascript.PolicySecurityController as a concrete i
 
 Rhino now comes with test drivers written in Java. These drivers can be used to test Rhino if you are making any changes to the core engine. They are designed to use the tests shared with the C-based SpiderMonkey engine in mozilla/js/tests in CVS.
 
-See (Running the Rhino tests)[http://base.uri/en-US/docs/Running_the_Rhino_tests] for details on how to execute the tests using JsDriver.
+See (Running the Rhino tests)[/en-US/docs/Running_the_Rhino_tests] for details on how to execute the tests using JsDriver.
 
 ## Support for calling Java methods and constructors with variable argument lists
 
@@ -74,4 +81,6 @@ This (list)[https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&short
 
 
 
-(Norrisboyd)[http://base.uri/User:Norrisboyd] 07:03, 13 June 2007 (PDT)
+---
+
+(Norrisboyd)[/User:Norrisboyd] 07:03, 13 June 2007 (PDT)

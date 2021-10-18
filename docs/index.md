@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino
+title: "Rhino"
 ---
 # Rhino
 {: .no_toc }
@@ -14,18 +13,18 @@ title: Rhino
 {:toc}
 
 ---
-!()[http://base.uri/@api/deki/files/832/=Rhino.jpg]
+!()[/@api/deki/files/832/=Rhino.jpg]
 
-`**Rhino** is an open-source implementation of (JavaScript)[http://base.uri/en-US/docs/Web/JavaScript] written entirely in Java. It is typically embedded into Java applications to provide scripting to end users. It is embedded in J2SE 6 as the default Java scripting engine.`
+`**Rhino** is an open-source implementation of (JavaScript)[/en-US/docs/Web/JavaScript] written entirely in Java. It is typically embedded into Java applications to provide scripting to end users. It is embedded in J2SE 6 as the default Java scripting engine.`
 
 #### Rhino downloads
 
-How to (get source and binaries)[Download_Rhino].
+How to (get source and binaries)[/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino].
 
 #### Rhino documentation
 
-(Information on Rhino)[Documentation] for script writers and embedders.
+(Information on Rhino)[/en-US/docs/Mozilla/Projects/Rhino/Documentation] for script writers and embedders.
 
 #### Rhino help
 
-(Some resources)[Community] if you get stuck.
+(Some resources)[/en-US/docs/Mozilla/Projects/Rhino/Community] if you get stuck.

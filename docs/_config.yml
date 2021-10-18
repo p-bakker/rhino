@@ -29,3 +29,10 @@ just_the_docs:
       name: Tutorials
     tools:
       name: Tools
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"

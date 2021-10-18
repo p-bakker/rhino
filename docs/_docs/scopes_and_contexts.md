@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino scopes and contexts
+title: "Rhino scopes and contexts"
 ---
 # Rhino scopes and contexts
 {: .no_toc }
@@ -54,11 +53,14 @@ The easiest way to embed Rhino is just to create a new scope this way whenever y
 
 So how are scopes used to look up names? In general, variables are looked up by starting at the current variable object (which is different depending on what code is being executed in the program), traversing its prototype chain, and then traversing the parent chain. In the diagram below, the order in which the six objects are traversed is indicated.
 
-!()[https://bug851266.bugzilla.mozilla.org/attachment.cgi?id=763083]
+figure: <figure style="margin: 0.75em auto; text-align: center;">
+  <img alt="" src="https://bug851266.bugzilla.mozilla.org/attachment.cgi?id=763083" style="height: 194px; width: 500px;"/>
+  
 
-Order of lookups in a two-deep scope chain with prototypes.
+  <figcaption>Order of lookups in a two-deep scope chain with prototypes.</figcaption>
+  
 
-
+</figure>
 
 For a more concrete example, let's consider the following script:
 
@@ -75,11 +77,14 @@ f(6);
 
 We have a top-level variable `g`, and the call to `f` will create a new top-level variable `x`. All top-level variables are properties of the scope object. When we start executing `f`, the scope chain will start with the function's activation object and will end with the top-level scope (see diagram below). The activation object has two properties, 'a' for the argument, and 'v' for the variable. The top-level scope has properties for the variable `g` and the function `f`.
 
-!()[https://bug851266.bugzilla.mozilla.org/attachment.cgi?id=763084]
+figure: <figure style="margin: 0.75em auto; text-align: center;">
+  <img src="https://bug851266.bugzilla.mozilla.org/attachment.cgi?id=763084" style="height: 496px; width: 820px;"/>
+  
 
-An example scope chain for a simple script.
+  <figcaption>An example scope chain for a simple script.</figcaption>
+  
 
-
+</figure>
 
 When the statement `x = v + a;` is executed, the scope chain is traversed looking for a 'x' property. When none is found, a new property 'x' is created in the top-level scope.
 
@@ -142,6 +147,7 @@ The (DynamicScopes example)[https://dxr.mozilla.org/mozilla/source/js/rhino/exam
 
 The key things to determine in setting up scopes for your application are
 
-1.  What scope should global variables be created in when your script executes an assignment to an undefined variable, and3.  What variables should your script have access to when it references a variable?
+1.  What scope should global variables be created in when your script executes an assignment to an undefined variable, and
+3.  What variables should your script have access to when it references a variable?
 
 The answer to 1 determines which scope should be the ultimate parent scope: Rhino follows the parent chain up to the top and places the variable there. After you've constructed your parent scope chain, the answer to question 2 may indicate that there are additional scopes that need to be searched that are not in your parent scope chain. You can add these as prototypes of scopes in your parent scope chain. When Rhino looks up a variable, it starts in the current scope, walks the prototype chain, then goes to the parent scope and its prototype chain, until there are no more parent scopes left.

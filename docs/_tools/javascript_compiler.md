@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino JavaScript compiler
+title: "Rhino JavaScript compiler"
 ---
 # Rhino JavaScript compiler
 {: .no_toc }
@@ -58,7 +57,7 @@ Writes the class file to _outputDirectory_.
 
 `-opt` _optLevel_
 
-Optimizes at level _optLevel_, which must be an integer between -1 and 9. See (Optimization)[Optimization] for more details. If _optLevel_ is greater than zero, `-debug` may not be specified.
+Optimizes at level _optLevel_, which must be an integer between -1 and 9. See (Optimization)[/en-US/docs/Mozilla/Projects/Rhino/Optimization] for more details. If _optLevel_ is greater than zero, `-debug` may not be specified.
 
 `-package` _packageName_
 
@@ -66,7 +65,7 @@ Specifies the package to generate the class into. The string _packageName_ must 
 
 `-version` _versionNumber_
 
-Specifies the language version to compile with. The string _versionNumber_ must be one of 100, 110, 120, 130, 140, 150, 160, or 170. See (JavaScript Language Versions)[Overview#JavaScript_Language_Versions] for more information on language versions.
+Specifies the language version to compile with. The string _versionNumber_ must be one of 100, 110, 120, 130, 140, 150, 160, or 170. See (JavaScript Language Versions)[/en-US/docs/Mozilla/Projects/Rhino/Overview#JavaScript_Language_Versions] for more information on language versions.
 
 ### Examples
 
@@ -82,4 +81,6 @@ $ java org.mozilla.javascript.tools.jsc.Main -extends java.applet.Applet
     -implements java.lang.Runnable NervousText.js
 ```
 
---(Norrisboyd)[http://base.uri/User:Norrisboyd] 12:26, 13 June 2007 (PDT)
+---
+
+--(Norrisboyd)[/User:Norrisboyd] 12:26, 13 June 2007 (PDT)

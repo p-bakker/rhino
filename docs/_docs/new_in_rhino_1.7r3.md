@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "New in Rhino 1.7R3"
 ---
 # New in Rhino 1.7R3
@@ -20,7 +19,7 @@ ECMAScript 5 support was added to Rhino by Raphael Speyer during a Google Summer
 
 ### JavaScript 1.8 support
 
-Rhino 1.7R3 has partial support for (JavaScript 1.8)[http://base.uri/en/JavaScript/New_in_JavaScript/1.8] contributed by Hannes Wallnöfer and Andreas Bolka. This includes expression closures and destructuring assignment shorthand but not generator expressions.
+Rhino 1.7R3 has partial support for (JavaScript 1.8)[/en/JavaScript/New_in_JavaScript/1.8] contributed by Hannes Wallnöfer and Andreas Bolka. This includes expression closures and destructuring assignment shorthand but not generator expressions.
 
 Note that JavaScript 1.8 features have to be enabled explicitly by selecting language version `180` in the shell, or `Context.VERSION_1_8` in embedded mode.
 

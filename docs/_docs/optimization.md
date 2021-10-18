@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino optimization
+title: "Rhino optimization"
 ---
 # Rhino optimization
 {: .no_toc }
@@ -34,4 +33,6 @@ All optimizations are performed. Simple data and type flow analysis is performed
 
 #### Note
 
-- Some language features (indirect calls to eval, use of the arguments property of function objects) were previously not supported in higher optimization levels. These features have been removed from the language in ECMA, so higher optimization levels are now conformant.- Future versions may allocate more aggressive optimizations to higher optimization levels. For compatibility with future versions, use level 1. For maximal optimization, use level 9, but retest your application when upgrading to new versions.- Scripts are optimized at compile time, not at execution time. So if a Script is compiled with the context's optimizationLevel set to 1, it will be executed with those optimizations, regardless of the optimizationLevel of the context in which it is executed.
+- Some language features (indirect calls to eval, use of the arguments property of function objects) were previously not supported in higher optimization levels. These features have been removed from the language in ECMA, so higher optimization levels are now conformant.
+- Future versions may allocate more aggressive optimizations to higher optimization levels. For compatibility with future versions, use level 1. For maximal optimization, use level 9, but retest your application when upgrading to new versions.
+- Scripts are optimized at compile time, not at execution time. So if a Script is compiled with the context's optimizationLevel set to 1, it will be executed with those optimizations, regardless of the optimizationLevel of the context in which it is executed.

@@ -1,6 +1,5 @@
 ---
-layout: default
-title: The JavaScript Runtime
+title: "The JavaScript Runtime"
 ---
 # The JavaScript Runtime
 {: .no_toc }

@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Performance Hints
+title: "Performance Hints"
 ---
 # Performance Hints
 {: .no_toc }
@@ -50,7 +49,7 @@ for (var i=0; i < n; i++)
     a[i] = i;
 ```
 
-could be sped up by changing the constructor call to `new Array(n)`. A constructor call like that indicates to the runtime that a JavaScript array should be used for the first n entries of the array. Similarly,
+could be sped up by changing the constructor call to `new Array(n)`. A constructor call like that indicates to the runtime that a JavaScript array should be used for the first _n_ entries of the array. Similarly,
 
  
 

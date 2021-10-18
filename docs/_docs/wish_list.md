@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino wish list
+title: "Rhino wish list"
 ---
 # Rhino wish list
 {: .no_toc }
@@ -20,7 +19,7 @@ The following are some ideas of ways people can contribute to Rhino. If somethin
 
 ### Support for changing the prototype of an object using `Object.setPrototypeOf`
 
-Being able to change the internal `(__proto__)[http://base.uri/en/JavaScript/Reference/Global_Objects/Object/proto]` property of an object has many advantages. For example, in some cases it's necessary to return functions from constructors. This is only possible in JavaScript if we use the constructor as a factory. However since the factory returns a function it wouldn't be an instance of the constructor, and wouldn't be able to share methods on its prototype.
+Being able to change the internal `(__proto__)[/en/JavaScript/Reference/Global_Objects/Object/proto]` property of an object has many advantages. For example, in some cases it's necessary to return functions from constructors. This is only possible in JavaScript if we use the constructor as a factory. However since the factory returns a function it wouldn't be an instance of the constructor, and wouldn't be able to share methods on its prototype.
 
 For more information see this (bug)[https://bugs.ecmascript.org/show_bug.cgi?id=264] I submitted.
 
@@ -68,4 +67,6 @@ The (Rhino Bug List)[https://bugzilla.mozilla.org/buglist.cgi?bug_file_loc=&bug_
 
 
 
-(Norrisboyd)[http://base.uri/User:Norrisboyd] 05:06, 11 March 2008 (PDT)
+---
+
+(Norrisboyd)[/User:Norrisboyd] 05:06, 11 March 2008 (PDT)

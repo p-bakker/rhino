@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Rhino downloads archive
+title: "Rhino downloads archive"
 ---
 # Rhino downloads archive
 {: .no_toc }
@@ -14,19 +13,19 @@ title: Rhino downloads archive
 {:toc}
 
 ---
-See also (Rhino downloads)[Download_Rhino].
+See also (Rhino downloads)[/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino].
 
 You can download binary distributions of Rhino from (http://ftp.mozilla.org/pub/mozilla.org/js/)[http://ftp.mozilla.org/pub/mozilla.org/js/].
 
 
 |  Release  |  Release Date  |  Change log  |  Download link  |
 |  ---  |  ---  |  ---  |  ---  |
-|  Rhino 1.7R4  |  2012-06-18  |  (New in Rhino 1.7R4)[New_in_Rhino_1.7R4]  |  (rhino1_7R4.zip)[https://github.com/downloads/mozilla/rhino/rhino1_7R4.zip]  |
-|  Rhino 1.7R3  |  2011-05-09  |  (New in Rhino 1.7R3)[New_in_Rhino_1.7R3]  |  (rhino1_7R3.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R3.zip]  |
-|  Rhino 1.7R2  |  2009-03-22  |  (New in Rhino 1.7R2)[New_in_Rhino_1.7R2]  |  (rhino1_7R2.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R2.zip]  |
-|  Rhino 1.7R1  |  2008-03-06  |  (New in Rhino 1.7R1)[New_in_Rhino_1.7R1]  |  (rhino1_7R1.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R1.zip]  |
-|  Rhino 1.6R7  |  2007-08-20  |  (New in Rhino 1.6R7)[New_in_Rhino_1.6R7]  |  (rhino1_6R7.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R7.zip]  |
-|  Rhino 1.6R6  |  2007-07-30  |  (New in Rhino 1.6R6)[New_in_Rhino_1.6R6]  |  (rhino1_6R6.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R6.zip]  |
+|  Rhino 1.7R4  |  2012-06-18  |  (New in Rhino 1.7R4)[/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.7R4]  |  (rhino1_7R4.zip)[https://github.com/downloads/mozilla/rhino/rhino1_7R4.zip]  |
+|  Rhino 1.7R3  |  2011-05-09  |  (New in Rhino 1.7R3)[/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.7R3]  |  (rhino1_7R3.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R3.zip]  |
+|  Rhino 1.7R2  |  2009-03-22  |  (New in Rhino 1.7R2)[/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.7R2]  |  (rhino1_7R2.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R2.zip]  |
+|  Rhino 1.7R1  |  2008-03-06  |  (New in Rhino 1.7R1)[/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.7R1]  |  (rhino1_7R1.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R1.zip]  |
+|  Rhino 1.6R7  |  2007-08-20  |  (New in Rhino 1.6R7)[/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.6R7]  |  (rhino1_6R7.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R7.zip]  |
+|  Rhino 1.6R6  |  2007-07-30  |  (New in Rhino 1.6R6)[/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.6R6]  |  (rhino1_6R6.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R6.zip]  |
 |  Rhino 1.6R5  |  2006-11-19  |  Same code as 1.6R4, but relicensed under MPL/GPL.  |  (rhino1_6R5.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R5.zip]  |
 |  Rhino 1.6R4  |  2006-09-10  |  (bug 343976)[https://bugzilla.mozilla.org/show_bug.cgi?id=343976]  |  (rhino1_6R4.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R4.zip]  |
 |  Rhino 1.6R3  |  2006-07-24  |  (Changes in 1.6R3)[https://www-archive.mozilla.org/rhino/rhino16r3]  |  (rhino1_6R3.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R3.zip]  |
@@ -40,6 +39,6 @@ You can download binary distributions of Rhino from (http://ftp.mozilla.org/pub/
 |  Rhino 1.5R1  |  2000-09-10  |  (Changes in 1.5R1)[https://www-archive.mozilla.org/rhino/rhino15r1]  |  (rhino15R1.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/older-packages/rhino15R1.zip]  |
 |  Rhino 1.4R3  |  1999-05-10  |  Initial public release  |  (rhino14R3.zip)[http://ftp.mozilla.org/pub/mozilla.org/js/older-packages/rhino14R3.zip]  |
 
-`Rhino 1.6R1 through 1.6R6 implement`(`E4X`)[http://base.uri/en-US/docs/Archive/Web/E4X]`using`(`XMLBeans`)[http://xmlbeans.apache.org/]`library. If you would like to use E4X you need to add `xbean.jar` from XMLBeans distribution to your class path. In Rhino 1.6R6 and later the E4X support has been rewritten to rely solely on the DOM3 APIs supported natively by Java 1.5. (Pre-Java 1.5 users can use DOM3 using Java's endorsed standards override mechanism if they have a DOM3-capable XML parser.) If neither XMLBeans nor DOM3 are present, E4X is not available.`
+`Rhino 1.6R1 through 1.6R6 implement`(`E4X`)[/en-US/docs/Archive/Web/E4X]`using`(`XMLBeans`)[http://xmlbeans.apache.org/]`library. If you would like to use E4X you need to add `xbean.jar` from XMLBeans distribution to your class path. In Rhino 1.6R6 and later the E4X support has been rewritten to rely solely on the DOM3 APIs supported natively by Java 1.5. (Pre-Java 1.5 users can use DOM3 using Java's endorsed standards override mechanism if they have a DOM3-capable XML parser.) If neither XMLBeans nor DOM3 are present, E4X is not available.`
 
 If you are looking for `js.jar` for XSLT or for IBM's Bean Scripting Framework (BSF), please read the following (note)[http://www.mozilla.org/rhino/bsf.html#bsf-issue] and then download one of the zip files above and unzip it.

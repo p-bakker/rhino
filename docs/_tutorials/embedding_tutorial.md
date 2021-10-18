@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Tutorial: Embedding Rhino"
 ---
 # Tutorial: Embedding Rhino
@@ -24,12 +23,28 @@ In this document, JavaScript code will be in `green`, Java code will be in `gree
 
 ## In this document:
 
-- (RunScript: A simple embedding)[http://base.uri#runScript]
-- (Entering a Context)[http://base.uri#enteringContext]- (Initializing standard objects)[http://base.uri#initializing]- (Collecting the arguments)[http://base.uri#collecting]- (Evaluating a script)[http://base.uri#evaluating]- (Printing the result)[http://base.uri#print]- (Exiting the Context)[http://base.uri#exit]- (Expose Java APIs)[http://base.uri#expose]
-- (Using Java APIs)[http://base.uri#useJava]- (Implementing interfaces)[http://base.uri#implementingInterfaces]- (Adding Java objects)[http://base.uri#addJava]- (Using JavaScript objects from Java)[http://base.uri#usingJSObjs]
-- (Using JavaScript variables)[http://base.uri#usingJSvars]- (Calling JavaScript functions)[http://base.uri#callingJSfuns]- (JavaScript host objects)[http://base.uri#javaScriptHostObjects]
-- (Defining Host Objects)[http://base.uri#definingHostObjects]- (Counter example)[http://base.uri#counter]
-- (Counter's constructors)[http://base.uri#counterCtors]- (Class name)[http://base.uri#classname]- (Dynamic properties)[http://base.uri#dynamic]- (Defining JavaScript "methods")[http://base.uri#definingMethods]- (Adding Counter to RunScript)[http://base.uri#addingCounter]
+- (RunScript: A simple embedding)[#runScript]
+- (Entering a Context)[#enteringContext]
+- (Initializing standard objects)[#initializing]
+- (Collecting the arguments)[#collecting]
+- (Evaluating a script)[#evaluating]
+- (Printing the result)[#print]
+- (Exiting the Context)[#exit]
+- (Expose Java APIs)[#expose]
+- (Using Java APIs)[#useJava]
+- (Implementing interfaces)[#implementingInterfaces]
+- (Adding Java objects)[#addJava]
+- (Using JavaScript objects from Java)[#usingJSObjs]
+- (Using JavaScript variables)[#usingJSvars]
+- (Calling JavaScript functions)[#callingJSfuns]
+- (JavaScript host objects)[#javaScriptHostObjects]
+- (Defining Host Objects)[#definingHostObjects]
+- (Counter example)[#counter]
+- (Counter's constructors)[#counterCtors]
+- (Class name)[#classname]
+- (Dynamic properties)[#dynamic]
+- (Defining JavaScript "methods")[#definingMethods]
+- (Adding Counter to RunScript)[#addingCounter]
 
 ## (RunScript: A simple embedding)[]
 
@@ -64,7 +79,7 @@ The code
 Scriptable scope = cx.initStandardObjects();
 ```
 
-Initializes the standard objects (`Object`, `Function`, etc.) This must be done before scripts can be executed. The null parameter tells `initStandardObjects` to create and return a scope object that we use in later calls.
+Initializes the standard objects (`Object`, `Function`, etc.) This must be done before scripts can be executed. The _null_ parameter tells `initStandardObjects` to create and return a scope object that we use in later calls.
 
 ### (Collecting the arguments)[]
 
@@ -85,7 +100,7 @@ The code
 Object result = cx.evaluateString(scope, s, "<cmd>", 1, null);
 ```
 
-uses the Context `cx` to evaluate a string. Evaluation of the script looks up variables in scope, and errors will be reported with the filename `<cmd>` and line number 1.
+uses the Context `cx` to evaluate a string. Evaluation of the script looks up variables in _scope_, and errors will be reported with the filename `<cmd>` and line number 1.
 
 ### (Printing the result)[]
 
@@ -95,7 +110,7 @@ The code
 System.out.println(cx.toString(result));
 ```
 
-prints the result of evaluating the script (contained in the variable result). result could be a string, JavaScript object, or other values. The `toString` method converts any JavaScript value to a string.
+prints the result of evaluating the script (contained in the variable _result_). _result_ could be a string, JavaScript object, or other values. The `toString` method converts any JavaScript value to a string.
 
 ### (Exiting the Context)[]
 
@@ -157,7 +172,7 @@ undefined
 
 ## (Using JavaScript objects from Java)[]
 
-After evaluating a script it's possible to query the scope for variables and functions, extracting values and calling JavaScript functions. This is illustrated in the (RunScript3)[https://dxr.mozilla.org/mozilla/source/js/rhino/examples/RunScript3.java] example. This example adds the ability to print the value of variable x and the result of calling function `f`. Both x and f are expected to be defined by the evaluated script. For example,
+After evaluating a script it's possible to query the scope for variables and functions, extracting values and calling JavaScript functions. This is illustrated in the (RunScript3)[https://dxr.mozilla.org/mozilla/source/js/rhino/examples/RunScript3.java] example. This example adds the ability to print the value of variable _x_ and the result of calling function `f`. Both _x_ and _f_ are expected to be defined by the evaluated script. For example,
 
 ```
 $ java RunScript3 "x = 7"
@@ -170,7 +185,7 @@ f("my args") = my arg
 
 ### (Using JavaScript variables)[]
 
-To print out the value of x, we add the following code:
+To print out the value of _x_, we add the following code:
 
 ```
 Object x = scope.get("x", scope);
@@ -183,7 +198,7 @@ if (x == Scriptable.NOT_FOUND) {
 
 ### (Calling JavaScript functions)[]
 
-To get the function f, call it, and print the result, we add this code:
+To get the function _f_, call it, and print the result, we add this code:
 
 ```
 Object fObj = scope.get("f", scope);
