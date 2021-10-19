@@ -51,4 +51,4 @@ In addition to getting the source from the zip files above, the source code for 
 git clone https://github.com/mozilla/rhino.git
 ```
 
-Rhino uses Gradle as its build system. Running the `./gradlew tasks```./gradlew tasks`` command at the top directory of the Rhino distribution will print the list of available build targets.
+Rhino uses Gradle as its build system. Running the `./gradlew tasks` command at the top directory of the Rhino distribution will print the list of available build targets.
