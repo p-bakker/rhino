@@ -223,7 +223,7 @@ class java.lang.String g(java.lang.String,int)
 class java.lang.String g(int,java.lang.String)
 ```
 
-See (Java Method Overloading and LiveConnect 3)[http://web.archive.org/web/20110623074154/http://www.mozilla.org/js/liveconnect/lc3_method_overloading.html] for a more precise definition of overloading semantics.
+See [Java Method Overloading and LiveConnect 3](http://web.archive.org/web/20110623074154/http://www.mozilla.org/js/liveconnect/lc3_method_overloading.html) for a more precise definition of overloading semantics.
 
 ### Implementing Java Interfaces
 
@@ -377,13 +377,13 @@ with (SwingGui) {
 }
 ```
 
-Previously such functionality was available only to embeddings that used (`org.mozilla.javascript.ImporterTopLevel`)[javadocs/org/mozilla/javascript/ImporterTopLevel.html] class as the top level scope. The class provides additional `importPackage()` and `importClass()` global functions for scripts but their extensive usage has tendency to pollute the global name space with names of Java classes and prevents loaded classes from garbage collection.
+Previously such functionality was available only to embeddings that used [`org.mozilla.javascript.ImporterTopLevel`](javadocs/org/mozilla/javascript/ImporterTopLevel.html) class as the top level scope. The class provides additional `importPackage()` and `importClass()` global functions for scripts but their extensive usage has tendency to pollute the global name space with names of Java classes and prevents loaded classes from garbage collection.
 
-See (Bugzilla 245882)[http://bugzilla.mozilla.org/show_bug.cgi?id=245882] for details.
+See [Bugzilla 245882](http://bugzilla.mozilla.org/show_bug.cgi?id=245882) for details.
 
 ### Java Exceptions
 
-Exceptions thrown by Java methods can be caught by JavaScript code using (try...catch statement)[/en-US/docs/JavaScript/Guide/Exception_Handling_Statements/try...catch_Statement]. Rhino wraps Java exceptions into error objects with the following properties:
+Exceptions thrown by Java methods can be caught by JavaScript code using [try...catch statement](/en-US/docs/JavaScript/Guide/Exception_Handling_Statements/try...catch_Statement). Rhino wraps Java exceptions into error objects with the following properties:
 
 - `javaException`: the original exception thrown by the Java method
 - `rhinoException`: the exception wrapped by the Rhino runtime

@@ -13,7 +13,7 @@ title: "Rhino history"
 {:toc}
 
 ---
-Rhino gets its name from the animal on the cover of the (O'Reilly)[http://www.oreilly.com] book about JavaScript.
+Rhino gets its name from the animal on the cover of the [O'Reilly](http://www.oreilly.com) book about JavaScript.
 
 The Rhino project was started at Netscape in Fall 1997. At the time, Netscape was planning to produce a version of Navigator written entirely in Java and so it needed an implementation of JavaScript written in Java. When Netscape stopped work on "Javagator", as it was called, somehow Rhino escaped the axe (rumor had it that the executives "forgot" it existed). Since then, a couple of major companies (including Sun) have licensed Rhino for use in their products and paid Netscape to do so, allowing us to continue work on it. Now Rhino is planned to be part of several server products from Netscape as well.
 
@@ -25,8 +25,8 @@ Rhino was released to mozilla.org in April of 1998. Originally Rhino classfile g
 
 ## See also
 
-(Rhino users)[/en/Rhino/Users]
+[Rhino users](/en/Rhino/Users)
 
-## Original Document Information- Author: (Norris Boyd)[mailto:norrisboyd@gmail.com]
+## Original Document Information- Author: [Norris Boyd](mailto:norrisboyd@gmail.com)
 - Last Updated Date: November 18, 2006
-- Copyright Information: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license | (Details)[http://www.mozilla.org/foundation/licensing/website-content.html].
+- Copyright Information: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license | [Details](http://www.mozilla.org/foundation/licensing/website-content.html).

@@ -13,11 +13,11 @@ title: "New in Rhino 1.6R7"
 {:toc}
 
 ---
-Rhino 1.6R7 is a minor bug fix release following the major feature release (Rhino 1.6R6)[en/New_in_Rhino_1.6R6].
+Rhino 1.6R7 is a minor bug fix release following the major feature release [Rhino 1.6R6](en/New_in_Rhino_1.6R6).
 The following bugs have been fixed:
 
 
 |  ID  |  Description  |
-|  (391349)[https://bugzilla.mozilla.org/show_bug.cgi?id=391349]  |  Exception on startup on JDK 1.4  |
-|  (391350)[https://bugzilla.mozilla.org/show_bug.cgi?id=391350]  |  Incorrect type inference for array and object literals  |
-|  (392825)[https://bugzilla.mozilla.org/show_bug.cgi?id=392825]  |  ClassShutter doesn't prevent access through Java reflection APIs  |
+|  [391349](https://bugzilla.mozilla.org/show_bug.cgi?id=391349)  |  Exception on startup on JDK 1.4  |
+|  [391350](https://bugzilla.mozilla.org/show_bug.cgi?id=391350)  |  Incorrect type inference for array and object literals  |
+|  [392825](https://bugzilla.mozilla.org/show_bug.cgi?id=392825)  |  ClassShutter doesn't prevent access through Java reflection APIs  |

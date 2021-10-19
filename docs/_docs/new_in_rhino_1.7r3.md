@@ -19,7 +19,7 @@ ECMAScript 5 support was added to Rhino by Raphael Speyer during a Google Summer
 
 ### JavaScript 1.8 support
 
-Rhino 1.7R3 has partial support for (JavaScript 1.8)[/en/JavaScript/New_in_JavaScript/1.8] contributed by Hannes Wallnöfer and Andreas Bolka. This includes expression closures and destructuring assignment shorthand but not generator expressions.
+Rhino 1.7R3 has partial support for [JavaScript 1.8](/en/JavaScript/New_in_JavaScript/1.8) contributed by Hannes Wallnöfer and Andreas Bolka. This includes expression closures and destructuring assignment shorthand but not generator expressions.
 
 Note that JavaScript 1.8 features have to be enabled explicitly by selecting language version `180` in the shell, or `Context.VERSION_1_8` in embedded mode.
 
@@ -29,7 +29,7 @@ Steve Yegge has contributed a new AST API to Rhino which should be useful for pe
 
 ### CommonJS module support
 
-A fully compliant (CommonJS module implementation)[http://wiki.commonjs.org/wiki/Modules/1.1.1] was contributed by Attila Szegedi. CommonJS modules are also available in the Rhino shell using the `-modules`, `-main`, and `-sandbox` command line options.
+A fully compliant [CommonJS module implementation](http://wiki.commonjs.org/wiki/Modules/1.1.1) was contributed by Attila Szegedi. CommonJS modules are also available in the Rhino shell using the `-modules`, `-main`, and `-sandbox` command line options.
 
 ### JS Objects implement Java collections
 

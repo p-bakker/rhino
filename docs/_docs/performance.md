@@ -13,7 +13,7 @@ title: "Performance Hints"
 {:toc}
 
 ---
-### (`var` Statements)[]
+### [`var` Statements]()
 
 Use `var` statements when possible. Not only is it good programming practice, it can speed up your code by allowing the compiler to generate special code to access the variables. For example, you could rewrite
 
@@ -39,7 +39,7 @@ function sum(a) {
 
 This is not equivalent code because the second version does not modify global variables `result` and `i`. However, if you don't intend for any other function to access these variables, then storing them globally is probably wrong anyway (what if you called another function that had a loop like the one in `sum`!).
 
-### (Arrays)[]
+### [Arrays]()
 
 Use the forms of the Array constructor that specify a size or take a list of initial elements. For example, the code
 
@@ -63,7 +63,7 @@ could be sped up by changing the constructor call to `new Array(n)`. A construct
 
  will cause a 3-element array to be allocated to hold the contents of the JavaScript array.
 
-### (`eval` and `new Function`)[]
+### [`eval` and `new Function`]()
 
 Avoid calling `eval` when possible. Calls to `eval` are slow because the script being executed must be compiled. Constructing a new function object can be slow for the same reason, while function expressions are more efficient because the function can be compiled. For example, the code
 
@@ -85,6 +85,6 @@ function MyObject(a) {
 
 Beginning with Rhino 1.4 Release 2, code passed to eval and new Function will be interpreted rather than compiled to class files.
 
-### (`with`)[]
+### [`with`]()
 
 Using the `with` statement prevents the compiler from generating code for fast access to local variables. You're probably better off explicitly accessing any properties of the object.

@@ -17,7 +17,7 @@ Rhino is available under open source licenses.
 
 ## MPL/GPL License
 
-The majority of the source code for Rhino is available under a (MPL 1.1/GPL 2.0)[http://www.mozilla.org/MPL/] license.
+The majority of the source code for Rhino is available under a [MPL 1.1/GPL 2.0](http://www.mozilla.org/MPL/) license.
 
 ## License for portions of the Rhino debugger
 
@@ -56,4 +56,4 @@ Additionally, some files (currently the contents of toolsrc/org/mozilla/javascri
 
 ---
 
-(Norrisboyd)[/User:Norrisboyd] 06:16, 14 April 2008 (PDT)
+[Norrisboyd](/User:Norrisboyd) 06:16, 14 April 2008 (PDT)
