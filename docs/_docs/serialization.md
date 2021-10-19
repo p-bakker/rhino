@@ -92,4 +92,4 @@ Now the function _f_ is compiled to a Java class, but that class is then made av
 
 ## Original Document Information- Author: (Norris Boyd)[mailto:norrisboyd@gmail.com]
 - Last Updated Date: November 15, 2006
-- Copyright Information: Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license | (Details)[http://www.mozilla.org/foundation/licensing/website-content.html].
+- Copyright Information: Portions of this content are Â© 1998â€“2006 by individual mozilla.org contributors; content available under a Creative Commons license | (Details)[http://www.mozilla.org/foundation/licensing/website-content.html].
