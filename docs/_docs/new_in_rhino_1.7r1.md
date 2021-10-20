@@ -17,7 +17,7 @@ Rhino 1.7R1 is a major feature release.
 
 ## JavaScript 1.7 features
 
-As of Rhino1.7R1, Rhino now supports the features of JavaScript 1.7. See [New in JavaScript 1.7](en/New_in_JavaScript_1.7). JavaScript 1.7 supports the following features:
+As of Rhino1.7R1, Rhino now supports the features of JavaScript 1.7. See [New in JavaScript 1.7](https://web.archive.org/web/20210308011309mp_/https://developer.mozilla.org/en-us/docs/web/javascript/new_in__javascript_1.7). JavaScript 1.7 supports the following features:
 
 - Generators and iterators
 - Array comprehensions
@@ -28,7 +28,7 @@ To enable JavaScript 1.7 support, you must set the version as 170 using the `Con
 
 ## Creating a JavaScript `Iterator` from a Java `Iterable` or `Iterator`
 
-In an extension to JavaScript 1.7, Rhino now supports creating JavaScript `Iterators` from [java.lang.Iterable](http://java.sun.com/javase/6/docs/api/java/lang/Iterable.html) and [java.util.Iterator](http://java.sun.com/javase/6/docs/api/java/util/Iterator.html) objects. For example:
+In an extension to JavaScript 1.7, Rhino now supports creating JavaScript `Iterators` from [java.lang.Iterable](http://java.sun.com/javase/6/docs/api/java/lang/iterable.html) and [java.util.Iterator](http://java.sun.com/javase/6/docs/api/java/util/iterator.html) objects. For example:
 
 ```
 js> m = new java.util.LinkedHashMap()
@@ -71,7 +71,7 @@ Prior to 1.7R1, Java classes in packages starting with "java." could be referenc
 
 ## Array and String generics
 
-See [New in JavaScript 1.6](en/New_in_JavaScript_1.6). This feature is now implemented in Rhino.
+See [New in JavaScript 1.6](https://web.archive.org/web/20210308011309mp_/https://developer.mozilla.org/en-us/docs/web/javascript/new_in__javascript_1.6). This feature is now implemented in Rhino.
 
 ## Configurable prompts in the shell
 

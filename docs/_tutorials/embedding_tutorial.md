@@ -1,7 +1,7 @@
 ---
-title: "Tutorial: Embedding Rhino"
+title: "Embedding Rhino"
 ---
-# Tutorial: Embedding Rhino
+# Embedding Rhino
 {: .no_toc }
 
 {: .fs-6 .fw-300 }
@@ -23,32 +23,32 @@ In this document, JavaScript code will be in `green`, Java code will be in `gree
 
 ## In this document:
 
-- [RunScript: A simple embedding](#runScript)
-- [Entering a Context](#enteringContext)
+- [RunScript: A simple embedding](#runscript)
+- [Entering a Context](#enteringcontext)
 - [Initializing standard objects](#initializing)
 - [Collecting the arguments](#collecting)
 - [Evaluating a script](#evaluating)
 - [Printing the result](#print)
 - [Exiting the Context](#exit)
 - [Expose Java APIs](#expose)
-- [Using Java APIs](#useJava)
-- [Implementing interfaces](#implementingInterfaces)
-- [Adding Java objects](#addJava)
-- [Using JavaScript objects from Java](#usingJSObjs)
-- [Using JavaScript variables](#usingJSvars)
-- [Calling JavaScript functions](#callingJSfuns)
-- [JavaScript host objects](#javaScriptHostObjects)
-- [Defining Host Objects](#definingHostObjects)
+- [Using Java APIs](#usejava)
+- [Implementing interfaces](#implementinginterfaces)
+- [Adding Java objects](#addjava)
+- [Using JavaScript objects from Java](#usingjsobjs)
+- [Using JavaScript variables](#usingjsvars)
+- [Calling JavaScript functions](#callingjsfuns)
+- [JavaScript host objects](#javascripthostobjects)
+- [Defining Host Objects](#defininghostobjects)
 - [Counter example](#counter)
-- [Counter's constructors](#counterCtors)
+- [Counter's constructors](#counterctors)
 - [Class name](#classname)
 - [Dynamic properties](#dynamic)
-- [Defining JavaScript "methods"](#definingMethods)
-- [Adding Counter to RunScript](#addingCounter)
+- [Defining JavaScript "methods"](#definingmethods)
+- [Adding Counter to RunScript](#addingcounter)
 
 ## RunScript: A simple embedding
 
-About the simplest embedding of Rhino possible is the [RunScript example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/RunScript.java). All it does it read a script from the command line, execute it, and print a result.
+About the simplest embedding of Rhino possible is the [RunScript example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/runscript.java). All it does it read a script from the command line, execute it, and print a result.
 
 Here's an example use of RunScript from a shell command line:
 
@@ -155,7 +155,7 @@ hi
 
 ### Adding Java objects
 
-The next example is [RunScript2](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/RunScript2.java). This is the same as RunScript, but with the addition of two extra lines of code:
+The next example is [RunScript2](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/runscript2.java). This is the same as RunScript, but with the addition of two extra lines of code:
 
 ```
 Object wrappedOut = Context.javaToJS(System.out, scope);
@@ -172,7 +172,7 @@ undefined
 
 ## Using JavaScript objects from Java
 
-After evaluating a script it's possible to query the scope for variables and functions, extracting values and calling JavaScript functions. This is illustrated in the [RunScript3](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/RunScript3.java) example. This example adds the ability to print the value of variable _x_ and the result of calling function `f`. Both _x_ and _f_ are expected to be defined by the evaluated script. For example,
+After evaluating a script it's possible to query the scope for variables and functions, extracting values and calling JavaScript functions. This is illustrated in the [RunScript3](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/runscript3.java) example. This example adds the ability to print the value of variable _x_ and the result of calling function `f`. Both _x_ and _f_ are expected to be defined by the evaluated script. For example,
 
 ```
 $ java RunScript3 "x = 7"
@@ -221,7 +221,7 @@ Custom host objects can implement special JavaScript features like dynamic prope
 
 ### Counter example
 
-The [Counter example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/Counter.java) is a simple host object. We'll go through it method by method below.
+The [Counter example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/counter.java) is a simple host object. We'll go through it method by method below.
 
 It's easy to try out new host object classes in the shell using its built-in `defineClass` function. We'll see how to add it to RunScript later. (Note that because the `java -jar` option preempts the rest of the classpath, we can't use that and access the `Counter` class.)
 
@@ -289,7 +289,7 @@ The call `c.resetCount()` above calls this method.
 
 ### Adding Counter to RunScript
 
-Now take a look at the [RunScript4 example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/RunScript4.java). It's the same as RunScript except for two additions. The method `ScriptableObject.defineClass` uses a Java class to define the Counter "class" in the top-level scope:
+Now take a look at the [RunScript4 example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/runscript4.java). It's the same as RunScript except for two additions. The method `ScriptableObject.defineClass` uses a Java class to define the Counter "class" in the top-level scope:
 
 ```
 ScriptableObject.defineClass(scope, Counter.class);

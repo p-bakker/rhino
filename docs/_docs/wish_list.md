@@ -19,7 +19,7 @@ The following are some ideas of ways people can contribute to Rhino. If somethin
 
 ### Support for changing the prototype of an object using `Object.setPrototypeOf`
 
-Being able to change the internal `[__proto__](/en/JavaScript/Reference/Global_Objects/Object/proto)` property of an object has many advantages. For example, in some cases it's necessary to return functions from constructors. This is only possible in JavaScript if we use the constructor as a factory. However since the factory returns a function it wouldn't be an instance of the constructor, and wouldn't be able to share methods on its prototype.
+Being able to change the internal `[__proto__](https://developer.mozilla.org/en/javascript/reference/global_objects/object/proto)` property of an object has many advantages. For example, in some cases it's necessary to return functions from constructors. This is only possible in JavaScript if we use the constructor as a factory. However since the factory returns a function it wouldn't be an instance of the constructor, and wouldn't be able to share methods on its prototype.
 
 For more information see this [bug](https://bugs.ecmascript.org/show_bug.cgi?id=264) I submitted.
 
@@ -63,10 +63,10 @@ Provide APIs to access the AST of parsed scripts. _Done_
 
 ## Bugs and enhancements
 
-The [Rhino Bug List](https://bugzilla.mozilla.org/buglist.cgi?bug_file_loc=&bug_file_loc_type=allwordssubstr&bug_id=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&bugidtype=include&chfieldfrom=&chfieldto=Now&chfieldvalue=&email1=&email2=&emailassigned_to1=1&emailassigned_to2=1&emailqa_contact2=1&emailreporter2=1&emailtype1=exact&emailtype2=exact&field-1-0-0=product&field-1-1-0=bug_status&field0-0-0=noop&keywords=&keywords_type=allwords&long_desc=&long_desc_type=substring&product=Rhino&query_format=advanced&remaction=&short_desc=&short_desc_type=allwordssubstr&status_whiteboard=&status_whiteboard_type=allwordssubstr&type-1-0-0=anyexact&type-1-1-0=anyexact&type0-0-0=noop&value-1-0-0=Rhino&value-1-1-0=UNCONFIRMED,NEW,ASSIGNED,REOPENED&value0-0-0=&votes=&order=bugs.bug_id&query_based_on=) contains a number of bugs and enhancement requests. Work on any of those is always welcome.
+The [Rhino Bug List](https://bugzilla.mozilla.org/buglist.cgi?bug_file_loc=&bug_file_loc_type=allwordssubstr&bug_id=&bug_status=unconfirmed&bug_status=new&bug_status=assigned&bug_status=reopened&bugidtype=include&chfieldfrom=&chfieldto=now&chfieldvalue=&email1=&email2=&emailassigned_to1=1&emailassigned_to2=1&emailqa_contact2=1&emailreporter2=1&emailtype1=exact&emailtype2=exact&field-1-0-0=product&field-1-1-0=bug_status&field0-0-0=noop&keywords=&keywords_type=allwords&long_desc=&long_desc_type=substring&product=rhino&query_format=advanced&remaction=&short_desc=&short_desc_type=allwordssubstr&status_whiteboard=&status_whiteboard_type=allwordssubstr&type-1-0-0=anyexact&type-1-1-0=anyexact&type0-0-0=noop&value-1-0-0=rhino&value-1-1-0=unconfirmed,new,assigned,reopened&value0-0-0=&votes=&order=bugs.bug_id&query_based_on=) contains a number of bugs and enhancement requests. Work on any of those is always welcome.
 
 
 
 ---
 
-[Norrisboyd](/User:Norrisboyd) 05:06, 11 March 2008 (PDT)
+[Norrisboyd](/user:norrisboyd) 05:06, 11 March 2008 (PDT)

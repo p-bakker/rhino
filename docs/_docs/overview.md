@@ -15,21 +15,21 @@ title: "Overview"
 ---
 ### Introduction
 
-Most people who have used [JavaScript](/en-US/docs/Web/JavaScript) before have done so by adding scripts to their [HTML](/en-US/docs/Glossary/HTML) web pages. However, Rhino is an implementation of the core language only and doesn't contain objects or methods for manipulating HTML documents.
+Most people who have used [JavaScript](https://developer.mozilla.org/en-us/docs/web/javascript) before have done so by adding scripts to their [HTML](https://developer.mozilla.org/en-us/docs/glossary/html) web pages. However, Rhino is an implementation of the core language only and doesn't contain objects or methods for manipulating HTML documents.
 
 Rhino contains
 
-- All the features of [JavaScript 1.7](/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7)
+- All the features of [JavaScript 1.7](https://developer.mozilla.org/en-us/docs/web/javascript/new_in_javascript/1.7)
 - Allows direct scripting of Java
-- [A JavaScript shell](/en-US/docs/Mozilla/Projects/Rhino/Shell) for executing JavaScript scripts
-- [A JavaScript compiler](/en-US/docs/Mozilla/Projects/Rhino/JavaScript_Compiler) to transform JavaScript source files into Java class files
-- [A JavaScript debugger](/en-US/docs/Mozilla/Projects/Rhino/Debugger) for scripts executed with Rhino
+- [A JavaScript shell](docs/shell) for executing JavaScript scripts
+- [A JavaScript compiler](docs/javascript_compiler) to transform JavaScript source files into Java class files
+- [A JavaScript debugger](docs/debugger) for scripts executed with Rhino
 
 ### Language
 
-The JavaScript language itself is standardized by [Standard ECMA-262 ECMAScript: A general purpose, cross-platform programming language](http://www.ecma-international.org/publications/standards/Ecma-262.htm). Rhino 1.3 and greater conform to Edition 3 of the Standard.
+The JavaScript language itself is standardized by [Standard ECMA-262 ECMAScript: A general purpose, cross-platform programming language](http://www.ecma-international.org/publications/standards/ecma-262.htm). Rhino 1.3 and greater conform to Edition 3 of the Standard.
 
-Rhino 1.6 and greater implement [ECMA-357 ECMAScript for XML (E4X)](https://web.archive.org/web/20131104082608/http://www.ecma-international.org/publications/standards/Ecma-357.htm). See the specification for more information on the standard, and [Rhino version 1.6R1 release notes](https://www-archive.mozilla.org/rhino/rhino16r1) for details on the implementation in Rhino.
+Rhino 1.6 and greater implement [ECMA-357 ECMAScript for XML (E4X)](https://web.archive.org/web/20131104082608/http://www.ecma-international.org/publications/standards/ecma-357.htm). See the specification for more information on the standard, and [Rhino version 1.6R1 release notes](https://www-archive.mozilla.org/rhino/rhino16r1) for details on the implementation in Rhino.
 
 In addition, Rhino has implemented JavaAdapters, which allows JavaScript to implement any Java interface or extend any Java class with a JavaScript object. See the `enum.js` example for more information.
 

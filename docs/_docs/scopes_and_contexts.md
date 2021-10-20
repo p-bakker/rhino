@@ -15,7 +15,7 @@ title: "Scopes and contexts"
 ---
 Before using Rhino in a concurrent environment, it is important to understand the distinction between Contexts and scopes. Both are required to execute scripts, but they play different roles. Simple embeddings of Rhino probably won't need any of the information here, but more complicated embeddings can gain performance and flexibility from the techniques described below.
 
-## `Contexts`
+## Contexts
 
 The Rhino Context object is used to store thread-specific information about the execution environment. There should be one and only one Context associated with each thread that will be executing JavaScript.
 
@@ -35,7 +35,7 @@ These calls will work properly even if there is already a Context associated wit
 
 Remember to put the `exit()` call in a `finally` block if you're executing code that could throw an exception.
 
-## `Scopes`
+## Scopes
 
 A scope is a set of JavaScript objects. Execution of scripts requires a scope for top-level script variable storage as well as a place to find standard objects like `Function` and `Object`.
 
@@ -49,7 +49,7 @@ ScriptableObject scope = cx.initStandardObjects();
 
 The easiest way to embed Rhino is just to create a new scope this way whenever you need one. However, `initStandardObjects` is an expensive method to call and it allocates a fair amount of memory. We'll see below that there are ways to share a scope created this way among multiple scopes and threads.
 
-## `Name Lookup`
+## Name Lookup
 
 So how are scopes used to look up names? In general, variables are looked up by starting at the current variable object (which is different depending on what code is being executed in the program), traversing its prototype chain, and then traversing the parent chain. In the diagram below, the order in which the six objects are traversed is indicated.
 
@@ -74,7 +74,7 @@ We have a top-level variable `g`, and the call to `f` will create a new top-leve
 
 When the statement `x = v + a;` is executed, the scope chain is traversed looking for a 'x' property. When none is found, a new property 'x' is created in the top-level scope.
 
-## `Sharing Scopes`
+## Sharing Scopes
 
 JavaScript is a language that uses delegation rather than traditional class-based inheritance. This is a large topic in itself, but for our purposes it gives us an easy way to share a set of read-only variables across multiple scopes.
 
@@ -92,7 +92,7 @@ The call to `newObject` simply creates a new JavaScript object with no propertie
 
 We can now use `newScope` as a scope for calls to evaluate scripts. Let's call this scope the _instance scope_. Any top-level functions or variables defined in the script will end up as properties of the instance scope. Uses of standard objects like `Function`, `String`, or `RegExp` will find the definitions in the shared scope. Multiple instance scopes can be defined and have their own variables for scripts yet share the definitions in the shared scope. These multiple instance scopes can be used concurrently.
 
-## `Sealed shared scopes`
+## Sealed shared scopes
 
 The ECMAScript standard defines that scripts can add properties to all standard library objects and in many cases it is also possible to change or delete their properties as well. Such behavior may not be suitable with shared scopes since if a script by mistake adds a property to a library object from the shared scope, that object would not be garbage collected until there are no active references to the shared scope potentially leading to memory leaks. In addition if a script alters some of the standard objects, the library may not work properly for other scripts. Such bugs are hard to debug and to remove a possibility for them to occur one can seal the shared scope and all its objects.
 
@@ -121,13 +121,13 @@ cx.evaluateString(sealedSharedScope , loadMe, "lazyLoad", 0, null);
 sealedSharedScope .sealObject();
 ```
 
-## `Dynamic Scopes`
+## Dynamic Scopes
 
 There's one problem with the setup outlined above. Calls to functions in JavaScript use _static scope_, which means that variables are first looked up in the function and then, if not found there, in the lexically enclosing scope. This causes problems if functions you define in your shared scope need access to variables you define in your instance scope.
 
 With Rhino 1.6, it is possible to use _dynamic scope_. With dynamic scope, functions look at the top-level scope of the currently executed script rather than their lexical scope. So we can store information that varies across scopes in the instance scope yet still share functions that manipulate that information reside in the shared scope.
 
-The [DynamicScopes example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/DynamicScopes.java) illustrates all the points discussed above.
+The [DynamicScopes example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/dynamicscopes.java) illustrates all the points discussed above.
 
 ## More on Scopes
 

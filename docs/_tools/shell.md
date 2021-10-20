@@ -31,11 +31,11 @@ Reads _script-filename-or-url_ content and execute it as a JavaScript script.
 
 #### `-opt _optLevel_` / `-O _optLevel_`
 
-Optimizes at level _optLevel_, which must be `-1` or an integer between `0` and `9`. See [Rhino Optimization](/en-US/docs/Mozilla/Projects/Rhino/Optimization) for more details.
+Optimizes at level _optLevel_, which must be `-1` or an integer between `0` and `9`. See [Rhino Optimization](docs/optimization) for more details.
 
 #### `-version _versionNumber_`
 
-Specifies the language version to compile with. The string _versionNumber_ must be one of `100`, `110`, `120`, `130`, `140`, `150`, `160 or 170`. See [JavaScript Language Versions](/en-US/docs/Mozilla/Projects/Rhino/Overview#JavaScript_Language_Versions) for more information on language versions.
+Specifies the language version to compile with. The string _versionNumber_ must be one of `100`, `110`, `120`, `130`, `140`, `150`, `160 or 170`. See [JavaScript Language Versions](docs/overview#javascript_language_versions) for more information on language versions.
 
 #### `-strict`
 
@@ -87,7 +87,7 @@ Load JavaScript source files named by string arguments. If multiple arguments ar
 
 #### `loadClass(_className_)`
 
-Load and execute the class named by the string argument _className_. The class must be a class that implements the Script interface, as will any script compiled by [Rhino JavaScript Compiler](/en-US/docs/Mozilla/Projects/Rhino/JavaScript_Compiler).
+Load and execute the class named by the string argument _className_. The class must be a class that implements the Script interface, as will any script compiled by [Rhino JavaScript Compiler](docs/javascript_compiler).
 
 #### `print([_expr_ ...])`
 

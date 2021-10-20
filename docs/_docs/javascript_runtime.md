@@ -37,11 +37,11 @@ There are six fundamental types in JavaScript. These types are implemented with 
 |  `String`  |  `java.lang.String`  |
 |  `Object`  |  `org.mozilla.javascript.Scriptable`  |
 
-In addition, ECMA refers to objects that implement a [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) method as functions. These object types are represented by implementing the [Function interface](/en/Core_JavaScript_1.5_Reference/Global_Objects/Function/prototype).
+In addition, ECMA refers to objects that implement a [`call()`](https://developer.mozilla.org/en-us/docs/web/javascript/reference/global_objects/function/call) method as functions. These object types are represented by implementing the [Function interface](https://developer.mozilla.org/en/core_javascript_1.5_reference/global_objects/function/prototype).
 
 Since JavaScript is a dynamically typed language, the static Java type of a JavaScript value is `java.lang.Object`.
 
-The behavior of the JavaScript engine is undefined if a value of any type other than the ones described above is introduced into JavaScript. This caveat does not apply to scripts that use [LiveConnect](/en/LiveConnect); the Java values are wrapped and unwrapped as appropriate to conform to the above type constraints.
+The behavior of the JavaScript engine is undefined if a value of any type other than the ones described above is introduced into JavaScript. This caveat does not apply to scripts that use [LiveConnect](https://developer.mozilla.org/en/liveconnect); the Java values are wrapped and unwrapped as appropriate to conform to the above type constraints.
 
 ## Property access
 
@@ -53,7 +53,7 @@ Instead, every property accessor method in `Scriptable` (`has`, `get`, `set`, `r
 
 Host objects are JavaScript objects that provide special access to the host environment. For example, in a browser environment, the `Window` and `Document` objects are host objects.
 
-The easiest way to define new host objects is by using `ScriptableObject.defineClass()`. This method defines a set of JavaScript objects using a Java class. Several of the [examples](en/Rhino/Examples) define host objects this way.
+The easiest way to define new host objects is by using `ScriptableObject.defineClass()`. This method defines a set of JavaScript objects using a Java class. Several of the [examples](en/rhino/examples) define host objects this way.
 
 If the services provided by `defineClass()` are insufficient, try other methods of `ScriptableObject` and `FunctionObject`, such as `defineProperty()` and `defineFunctionProperties()`.
 

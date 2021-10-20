@@ -13,7 +13,7 @@ title: "New in Rhino 1.6R7"
 {:toc}
 
 ---
-Rhino 1.6R7 is a minor bug fix release following the major feature release [Rhino 1.6R6](en/New_in_Rhino_1.6R6).
+Rhino 1.6R7 is a minor bug fix release following the major feature release [Rhino 1.6R6](https://web.archive.org/web/20210308011309mp_/https://developer.mozilla.org/en-us/docs/web/javascript/new_in__rhino_1.6r6).
 The following bugs have been fixed:
 
 
