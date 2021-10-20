@@ -1,7 +1,7 @@
 ---
-title: "And BSF"
+title: "BSF"
 ---
-# And BSF
+#  BSF
 {: .no_toc }
 
 {: .fs-6 .fw-300 }

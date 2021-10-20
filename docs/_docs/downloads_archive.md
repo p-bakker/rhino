@@ -13,19 +13,19 @@ title: "Downloads archive"
 {:toc}
 
 ---
-See also [Rhino downloads](/Download_Rhino).
+See also [Rhino downloads](/en-US/docs/Mozilla/Projects/Rhino/Download_Rhino).
 
 You can download binary distributions of Rhino from [http://ftp.mozilla.org/pub/mozilla.org/js/](http://ftp.mozilla.org/pub/mozilla.org/js/).
 
 
 |  Release  |  Release Date  |  Change log  |  Download link  |
 |  ---  |  ---  |  ---  |  ---  |
-|  Rhino 1.7R4  |  2012-06-18  |  [New in Rhino 1.7R4](/New_in_Rhino_1.7R4)  |  [rhino1_7R4.zip](https://github.com/downloads/mozilla/rhino/rhino1_7R4.zip)  |
-|  Rhino 1.7R3  |  2011-05-09  |  [New in Rhino 1.7R3](/New_in_Rhino_1.7R3)  |  [rhino1_7R3.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R3.zip)  |
-|  Rhino 1.7R2  |  2009-03-22  |  [New in Rhino 1.7R2](/New_in_Rhino_1.7R2)  |  [rhino1_7R2.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R2.zip)  |
-|  Rhino 1.7R1  |  2008-03-06  |  [New in Rhino 1.7R1](/New_in_Rhino_1.7R1)  |  [rhino1_7R1.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R1.zip)  |
-|  Rhino 1.6R7  |  2007-08-20  |  [New in Rhino 1.6R7](/New_in_Rhino_1.6R7)  |  [rhino1_6R7.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R7.zip)  |
-|  Rhino 1.6R6  |  2007-07-30  |  [New in Rhino 1.6R6](/New_in_Rhino_1.6R6)  |  [rhino1_6R6.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R6.zip)  |
+|  Rhino 1.7R4  |  2012-06-18  |  [New in Rhino 1.7R4](/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.7R4)  |  [rhino1_7R4.zip](https://github.com/downloads/mozilla/rhino/rhino1_7R4.zip)  |
+|  Rhino 1.7R3  |  2011-05-09  |  [New in Rhino 1.7R3](/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.7R3)  |  [rhino1_7R3.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R3.zip)  |
+|  Rhino 1.7R2  |  2009-03-22  |  [New in Rhino 1.7R2](/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.7R2)  |  [rhino1_7R2.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R2.zip)  |
+|  Rhino 1.7R1  |  2008-03-06  |  [New in Rhino 1.7R1](/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.7R1)  |  [rhino1_7R1.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R1.zip)  |
+|  Rhino 1.6R7  |  2007-08-20  |  [New in Rhino 1.6R7](/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.6R7)  |  [rhino1_6R7.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R7.zip)  |
+|  Rhino 1.6R6  |  2007-07-30  |  [New in Rhino 1.6R6](/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.6R6)  |  [rhino1_6R6.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R6.zip)  |
 |  Rhino 1.6R5  |  2006-11-19  |  Same code as 1.6R4, but relicensed under MPL/GPL.  |  [rhino1_6R5.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R5.zip)  |
 |  Rhino 1.6R4  |  2006-09-10  |  [bug 343976](https://bugzilla.mozilla.org/show_bug.cgi?id=343976)  |  [rhino1_6R4.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R4.zip)  |
 |  Rhino 1.6R3  |  2006-07-24  |  [Changes in 1.6R3](https://www-archive.mozilla.org/rhino/rhino16r3)  |  [rhino1_6R3.zip](http://ftp.mozilla.org/pub/mozilla.org/js/rhino1_6R3.zip)  |

@@ -13,7 +13,7 @@ title: "Community"
 {:toc}
 
 ---
-Have a question that you can't find answer to in the [Rhino documentation](/Documentation)? Here are some additional resources for help:
+Have a question that you can't find answer to in the [Rhino documentation](/en-US/docs/Mozilla/Projects/Rhino/Documentation)? Here are some additional resources for help:
 
 #### Mailing List
 

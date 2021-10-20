@@ -17,10 +17,10 @@ title: "New in Rhino 1.7R2"
 
 Rhino has supported Continuations for some time now, but there wasn't a great way to interact with continuations from Java. Continuations have been useful with in server-side scripting, since it allows for saving and restarting JavaScript execution, possibly with serializing the execution state when stopped. With Rhino 1.7R2, methods in `org.mozilla.javascript.Context` allow for control from Java:
 
-- ``[executeScriptWithContinuations](javadocs/org/mozilla/javascript/Context.html#executeScriptWithContinuations(org.mozilla.javascript.Script,%20org.mozilla.javascript.Scriptable)) - Execute script that may pause execution by capturing a continuation.``
+- ``[executeScriptWithContinuations](http://www.mozilla.org/rhino/apidocs/org/mozilla/javascript/Context.html#executeScriptWithContinuations(org.mozilla.javascript.Script,%20org.mozilla.javascript.Scriptable)) - Execute script that may pause execution by capturing a continuation.``
 - ``callFunctionWithContinuations - Call function that may pause execution by capturing a continuation.``
-- ``[captureContinuation](javadocs/org/mozilla/javascript/Context.html#captureContinuation()) - Capture a continuation from the current execution.``
-- ``[resumeContinuation](javadocs/org/mozilla/javascript/Context.html#resumeContinuation(java.lang.Object,%20org.mozilla.javascript.Scriptable,%20java.lang.Object)) - Restarts execution of the JavaScript suspended at the call to captureContinuation.``
+- ``[captureContinuation](http://www.mozilla.org/rhino/apidocs/org/mozilla/javascript/Context.html#captureContinuation()) - Capture a continuation from the current execution.``
+- ``[resumeContinuation](http://www.mozilla.org/rhino/apidocs/org/mozilla/javascript/Context.html#resumeContinuation(java.lang.Object,%20org.mozilla.javascript.Scriptable,%20java.lang.Object)) - Restarts execution of the JavaScript suspended at the call to captureContinuation.``
 
 For example, if you had a Java class MyClass with a method f(). Say that you wanted to pause execution of a script when f() was called. You could call captureContinuation, which wraps up all the state of the current execution and returns it as a ContinuationPending object. ContinuationPending is also an exception; you indicate to Rhino that you want to suspend execution by throwing the exception:
 

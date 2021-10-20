@@ -20,7 +20,7 @@ Rhino is available for download both in source and compiled form.
 
 |  Release  |  Release Date  |  Change log  |  Download link  |
 |  ---  |  ---  |  ---  |  ---  |
-|  Rhino 1.7R4  |  2012-06-18  |  [New in Rhino 1.7R4](/New_in_Rhino_1.7R4)  |  [rhino1_7R4.zip](https://github.com/downloads/mozilla/rhino/rhino1_7R4.zip)  |
+|  Rhino 1.7R4  |  2012-06-18  |  [New in Rhino 1.7R4](/en-US/docs/Mozilla/Projects/Rhino/New_in_Rhino_1.7R4)  |  [rhino1_7R4.zip](https://github.com/downloads/mozilla/rhino/rhino1_7R4.zip)  |
 |  Rhino 1.7R5  |  2015-01-29  |  [Release Notes](https://github.com/mozilla/rhino/releases/tag/Rhino1_7R5_RELEASE)  |  [rhino1_7R5.zip](https://github.com/mozilla/rhino/releases/download/Rhino1_7R5_RELEASE/rhino1_7R5.zip)  |
 |  Rhino 1.7.6  |  2015-04-15  |  [Release Notes](https://github.com/mozilla/rhino/releases/tag/Rhino1_7_6_RELEASE)  |  [rhino1.7.6.zip](https://github.com/mozilla/rhino/releases/download/Rhino1_7_6_RELEASE/rhino1.7.6.zip)  |
 |  Rhino 1.7.7  |  2015-06-17  |  [Release Notes](https://github.com/mozilla/rhino/releases/tag/Rhino1_7_7_RELEASE)  |  [rhino1.7.7.zip](https://github.com/mozilla/rhino/releases/download/Rhino1_7_7_RELEASE/rhino1.7.7.zip)  |
@@ -41,7 +41,7 @@ Rhino is open source. As of release 1.7R4 Rhino is available under [MPL](https:/
 
 Previous versions were released under MPL 1.1/GPL 2.0 license.
 
-See [Rhino license](/License) for further information.
+See [Rhino license](/en-US/docs/Mozilla/Projects/Rhino/License) for further information.
 
 ## Source
 
