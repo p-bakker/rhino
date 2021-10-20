@@ -1,7 +1,7 @@
 ---
-title: "Rhino license"
+title: "License"
 ---
-# Rhino license
+# License
 {: .no_toc }
 
 {: .fs-6 .fw-300 }

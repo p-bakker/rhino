@@ -1,7 +1,7 @@
 ---
-title: "Rhino wish list"
+title: "Wish list"
 ---
-# Rhino wish list
+# Wish list
 {: .no_toc }
 
 {: .fs-6 .fw-300 }

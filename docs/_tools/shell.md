@@ -1,7 +1,7 @@
 ---
-title: "Rhino shell"
+title: "Shell"
 ---
-# Rhino shell
+# Shell
 {: .no_toc }
 
 {: .fs-6 .fw-300 }

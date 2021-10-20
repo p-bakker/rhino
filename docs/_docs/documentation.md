@@ -1,7 +1,7 @@
 ---
-title: "Rhino documentation"
+title: "Documentation"
 ---
-# Rhino documentation
+# Documentation
 {: .no_toc }
 
 {: .fs-6 .fw-300 }
@@ -17,67 +17,220 @@ Information on Rhino for script writers and embedders.
 
 ## General
 
-[Overview](/en-US/docs/Rhino/Overview)
-&nbsp;&nbsp;&nbsp;&nbsp;An overview of the JavaScript language and of Rhino.
-[License](/en-US/docs/Rhino/License)
-&nbsp;&nbsp;&nbsp;&nbsp;Rhino license information.
-[Requirements and limitations](/en-US/docs/Rhino/Requirements_and_Limitations)
-&nbsp;&nbsp;&nbsp;&nbsp;What you must have to run Rhino; what Rhino cannot do.
-[Downloads archive](/en-US/docs/Rhino/Downloads_archive)
-&nbsp;&nbsp;&nbsp;&nbsp;Includes release notes for Rhino releases
-[Optimization](/en-US/docs/Rhino/Optimization)
-&nbsp;&nbsp;&nbsp;&nbsp;Details on the various optimization levels.
-[FAQ](/en-US/docs/Rhino/FAQ)
-&nbsp;&nbsp;&nbsp;&nbsp;Answers to frequently asked questions about Rhino.
-[Rhino history](/en-US/docs/Rhino/History)
-&nbsp;&nbsp;&nbsp;&nbsp;History of the beast.
+dl: <dl>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Overview" title="Rhino_Overview">Overview</a>
+  </dt>
+  
+ 
+  <dd>An overview of the JavaScript language and of Rhino.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/License" title="Rhino_License">License</a>
+  </dt>
+  
+ 
+  <dd>Rhino license information.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Requirements_and_Limitations" title="Rhino_Requirements_and_Limitations">Requirements and limitations</a>
+  </dt>
+  
+ 
+  <dd>What you must have to run Rhino; what Rhino cannot do.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Downloads_archive" title="Rhino_downloads_archive">Downloads archive</a>
+  </dt>
+  
+ 
+  <dd>Includes release notes for Rhino releases</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Optimization" title="Rhino_Optimization">Optimization</a>
+  </dt>
+  
+ 
+  <dd>Details on the various optimization levels.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/FAQ" title="Rhino_FAQ">FAQ</a>
+  </dt>
+  
+ 
+  <dd>Answers to frequently asked questions about Rhino.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/History">Rhino history</a>
+  </dt>
+  
+ 
+  <dd>History of the beast.</dd>
+  
 
+</dl>
 
 ## Writing Scripts
 
-[Scripting Java](/en-US/docs/Scripting_Java)
-&nbsp;&nbsp;&nbsp;&nbsp;How to use Rhino to script Java classes.
-[Performance Hints](/en-US/docs/Rhino/Performance)
-&nbsp;&nbsp;&nbsp;&nbsp;Some tips on writing faster JavaScript code.
+dl: <dl>
+  
+ 
+  <dt>
+    <a class="internal" href="/en-US/docs/Scripting_Java" title="Scripting Java">Scripting Java</a>
+  </dt>
+  
+ 
+  <dd>How to use Rhino to script Java classes.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Performance">Performance Hints</a>
+  </dt>
+  
+ 
+  <dd>Some tips on writing faster JavaScript code.</dd>
+  
 
+</dl>
 
 ## JavaScript Tools
 
-[Rhino Shell](/en-US/docs/Rhino/Shell)
-&nbsp;&nbsp;&nbsp;&nbsp;Interactive or batch execution of scripts.
-[JavaScript Debugger](/en-US/docs/Rhino/Debugger)
-&nbsp;&nbsp;&nbsp;&nbsp;Debugging scripts running in Rhino.
-[JavaScript Compiler](/en-US/docs/Rhino/JavaScript_Compiler)
-&nbsp;&nbsp;&nbsp;&nbsp;Compiling scripts into Java class files.
-[Running the Rhino tests](/en-US/docs/Running_the_Rhino_tests)
-&nbsp;&nbsp;&nbsp;&nbsp;Running the JavaScript test suite with Rhino.
+dl: <dl>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Shell" title="Rhino_Shell">Rhino Shell</a>
+  </dt>
+  
+ 
+  <dd>Interactive or batch execution of scripts.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Debugger">JavaScript Debugger</a>
+  </dt>
+  
+ 
+  <dd>Debugging scripts running in Rhino.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/JavaScript_Compiler" title="Rhino_JavaScript_Compiler">JavaScript Compiler</a>
+  </dt>
+  
+ 
+  <dd>Compiling scripts into Java class files.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Running_the_Rhino_tests" title="Running_the_Rhino_tests">Running the Rhino tests</a>
+  </dt>
+  
+ 
+  <dd>Running the JavaScript test suite with Rhino.</dd>
+  
 
+</dl>
 
 ## Embedding Rhino
 
-[Embedding tutorial](/en-US/docs/Rhino/Embedding_tutorial)
-&nbsp;&nbsp;&nbsp;&nbsp;A short tutorial on how to embed Rhino into your application.
-[API Javadoc Reference](http://mozilla.github.io/rhino/javadoc/index.html) (Link broken?  [Try this at Jarvana.](http://www.jarvana.com/jarvana/view/org/mozilla/rhino/1.7R3/rhino-1.7R3-javadoc.jar!/index.html))
-&nbsp;&nbsp;&nbsp;&nbsp;An annotated outline of the programming interface to Rhino (tip only).
-[Scopes and Contexts](/en-US/docs/Rhino/Scopes_and_Contexts)
-&nbsp;&nbsp;&nbsp;&nbsp;Describes how to use scopes and contexts for the best performance and flexibility, with an eye toward multithreaded environments.
-[Serialization](/en-US/docs/Rhino/Serialization)
-&nbsp;&nbsp;&nbsp;&nbsp;How to serialize JavaScript objects and functions in Rhino.
-[Runtime](/en-US/docs/Rhino/Runtime)
-&nbsp;&nbsp;&nbsp;&nbsp;A brief description of the JavaScript runtime.
-[Small Footprint](/en-US/docs/Rhino/Footprint)
-&nbsp;&nbsp;&nbsp;&nbsp;Hints for those interested in small-footprint embeddings.
-[Examples](/en-US/docs/Rhino/Examples)
-&nbsp;&nbsp;&nbsp;&nbsp;A set of examples showing how to control the JavaScript engine and build JavaScript host objects.
-[Using Rhino with Bean Scripting Framework (BSF)](/en-US/docs/Rhino/BSF)
-&nbsp;&nbsp;&nbsp;&nbsp;How to use Rhino with apps that support BSF (Bean Scripting Framework) from the Apache Jakarta project.
+dl: <dl>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Embedding_tutorial">Embedding tutorial</a>
+  </dt>
+  
+ 
+  <dd>A short tutorial on how to embed Rhino into your application.</dd>
+  
+ 
+  <dt>
+    <a class="external" href="http://mozilla.github.io/rhino/javadoc/index.html">API Javadoc Reference</a>
+     (Link broken?  
+    <a href="http://www.jarvana.com/jarvana/view/org/mozilla/rhino/1.7R3/rhino-1.7R3-javadoc.jar!/index.html" title="http://www.jarvana.com/jarvana/view/org/mozilla/rhino/1.7R3/rhino-1.7R3-javadoc.jar!/index.html">Try this at Jarvana.</a>
+    )
+  </dt>
+  
+ 
+  <dd>An annotated outline of the programming interface to Rhino (tip only).</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Scopes_and_Contexts" title="https://developer.mozilla.org/editor/fckeditor/core/editor/en-US/docs/Rhino_documentation/Scopes_and_Contexts">Scopes and Contexts</a>
+  </dt>
+  
+ 
+  <dd>Describes how to use scopes and contexts for the best performance and flexibility, with an eye toward multithreaded environments.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Serialization">Serialization</a>
+  </dt>
+  
+ 
+  <dd>How to serialize JavaScript objects and functions in Rhino.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Runtime">Runtime</a>
+  </dt>
+  
+ 
+  <dd>A brief description of the JavaScript runtime.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Footprint">Small Footprint</a>
+  </dt>
+  
+ 
+  <dd>Hints for those interested in small-footprint embeddings.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/Examples">Examples</a>
+  </dt>
+  
+ 
+  <dd>A set of examples showing how to control the JavaScript engine and build JavaScript host objects.</dd>
+  
+ 
+  <dt>
+    <a href="/en-US/docs/Rhino/BSF">Using Rhino with Bean Scripting Framework (BSF)</a>
+  </dt>
+  
+ 
+  <dd>How to use Rhino with apps that support BSF (Bean Scripting Framework) from the Apache Jakarta project.</dd>
+  
 
+</dl>
 
 ## External references
 
-[Scripting Languages for Java](http://www.ociweb.com/jnb/archive/jnbMar2001.html) (Link Broken? [Try this at http://archive.is/SsVXq](http://archive.is/SsVXq))
-&nbsp;&nbsp;&nbsp;&nbsp;An article comparing and contrasting Rhino and Jython.
+dl: <dl>
+  
+ 
+  <dt>
+    <a class="external" href="http://www.ociweb.com/jnb/archive/jnbMar2001.html">Scripting Languages for Java</a>
+     (Link Broken? 
+    <a href="http://archive.is/SsVXq" title="Java News Brief March 2001">Try this at http://archive.is/SsVXq </a>
+    ) 
+  </dt>
+  
+ 
+  <dd>An article comparing and contrasting Rhino and Jython.</dd>
+  
 
+</dl>
 
 ## Rhino contributors
 

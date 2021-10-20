@@ -1,7 +1,7 @@
 ---
-title: "Rhino requirements and limitations"
+title: "Requirements and limitations"
 ---
-# Rhino requirements and limitations
+# Requirements and limitations
 {: .no_toc }
 
 {: .fs-6 .fw-300 }

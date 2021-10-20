@@ -1,7 +1,7 @@
 ---
-title: "Rhino optimization"
+title: "Optimization"
 ---
-# Rhino optimization
+# Optimization
 {: .no_toc }
 
 {: .fs-6 .fw-300 }

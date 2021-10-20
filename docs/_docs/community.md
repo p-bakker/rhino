@@ -1,7 +1,7 @@
 ---
-title: "Rhino community"
+title: "Community"
 ---
-# Rhino community
+# Community
 {: .no_toc }
 
 {: .fs-6 .fw-300 }

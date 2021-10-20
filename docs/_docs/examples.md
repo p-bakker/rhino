@@ -1,7 +1,7 @@
 ---
-title: "Rhino Examples"
+title: "Examples"
 ---
-# Rhino Examples
+# Examples
 {: .no_toc }
 
 {: .fs-6 .fw-300 }
@@ -15,7 +15,7 @@ title: "Rhino Examples"
 ---
 Examples have been provided that show how to control the JavaScript engine and how  to implement scriptable host objects. All the examples are in the git tree at `[mozilla/js/rhino/examples](https://github.com/mozilla/rhino/tree/master/examples/)`.
 
-## [Sample Scripts]()
+## Sample Scripts
 
 The `[unique.js](https://github.com/mozilla/rhino/tree/master/examples/unique.js)` script allows printing unique lines from a file.
 
@@ -29,7 +29,7 @@ The `[enum.js](https://github.com/mozilla/rhino/tree/master/examples/enum.js)` s
 
 The [NervousText.js](https://github.com/mozilla/rhino/tree/master/examples/NervousText.js) script is a JavaScript implementation of the famous NervousText applet using JavaScript compiled to Java classes using [jsc](jsc.html). It can be run in the HTML page [NervousText.html](https://github.com/mozilla/rhino/tree/master/examples/NervousText.html).
 
-## [Controlling the JavaScript Engine]()
+## Controlling the JavaScript Engine
 
 #### The RunScript class
 

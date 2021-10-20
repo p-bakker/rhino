@@ -30,8 +30,7 @@ There are six fundamental types in JavaScript. These types are implemented with 
 
 |  JavaScript fundamental type  |  Java type  |
 |  ---  |  ---  |
- 
-|  `Undefined`  |  A singleton object defined by `Context.getUndefinedType()`  |
+ |  `Undefined`  |  A singleton object defined by `Context.getUndefinedType()`  |
 |  `Null`  |  `null`  |
 |  `Boolean`  |  `java.lang.Boolean`  |
 |  `Number`  |  `java.lang.Number`, that is, any of `java.lang.Byte`, `java.lang.Short`, `java.lang.Integer`, `java.lang.Float`, or `java.lang.Double`. Not `java.lang.Long`, since a double representation of a long may lose precision.  |

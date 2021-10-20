@@ -1,7 +1,7 @@
 ---
-title: "Rhino overview"
+title: "Overview"
 ---
-# Rhino overview
+# Overview
 {: .no_toc }
 
 {: .fs-6 .fw-300 }

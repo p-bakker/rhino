@@ -46,7 +46,7 @@ In this document, JavaScript code will be in `green`, Java code will be in `gree
 - [Defining JavaScript "methods"](#definingMethods)
 - [Adding Counter to RunScript](#addingCounter)
 
-## [RunScript: A simple embedding]()
+## RunScript: A simple embedding
 
 About the simplest embedding of Rhino possible is the [RunScript example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/RunScript.java). All it does it read a script from the command line, execute it, and print a result.
 
@@ -61,7 +61,7 @@ $ java RunScript "function f(x){return x+1} f(7)"
 
 Note that you'll have to have both the Rhino classes and the RunScript example class file in the classpath. Let's step through the body of `main` one line at time.
 
-### [Entering a Context]()
+### Entering a Context
 
 The code
 
@@ -71,7 +71,7 @@ Context cx = Context.enter();
 
 Creates and enters a `Context`. A `Context` stores information about the execution environment of a script.
 
-### [Initializing standard objects]()
+### Initializing standard objects
 
 The code
 
@@ -81,7 +81,7 @@ Scriptable scope = cx.initStandardObjects();
 
 Initializes the standard objects (`Object`, `Function`, etc.) This must be done before scripts can be executed. The _null_ parameter tells `initStandardObjects` to create and return a scope object that we use in later calls.
 
-### [Collecting the arguments]()
+### Collecting the arguments
 
 This code is standard Java and not specific to Rhino. It just collects all the arguments and concatenates them together.
 
@@ -92,7 +92,7 @@ for (int i=0; i < args.length; i++) {
 }
 ```
 
-### [Evaluating a script]()
+### Evaluating a script
 
 The code
 
@@ -102,7 +102,7 @@ Object result = cx.evaluateString(scope, s, "<cmd>", 1, null);
 
 uses the Context `cx` to evaluate a string. Evaluation of the script looks up variables in _scope_, and errors will be reported with the filename `<cmd>` and line number 1.
 
-### [Printing the result]()
+### Printing the result
 
 The code
 
@@ -112,7 +112,7 @@ System.out.println(cx.toString(result));
 
 prints the result of evaluating the script (contained in the variable _result_). _result_ could be a string, JavaScript object, or other values. The `toString` method converts any JavaScript value to a string.
 
-### [Exiting the Context]()
+### Exiting the Context
 
 The code
 
@@ -124,9 +124,9 @@ The code
 
 exits the Context. This removes the association between the Context and the current thread and is an essential cleanup action. There should be a call to `exit` for every call to `enter`. To make sure that it is called even if an exception is thrown, it is put into the finally block corresponding to the try block starting after `Context.enter()`.
 
-## [Expose Java APIs]()
+## Expose Java APIs
 
-### [Using Java APIs]()
+### Using Java APIs
 
 No additional code in the embedding needed! The JavaScript feature called_LiveConnect_ allows JavaScript programs to interact with Java objects:
 
@@ -136,7 +136,7 @@ $ java RunScript "java.lang.System.out.println(3)"
 undefined
 ```
 
-### [Implementing interfaces]()
+### Implementing interfaces
 
 Using Rhino, JavaScript objects can implement arbitrary Java interfaces. There's no Java code to write -- it's part of Rhino's LiveConnect implementation. For example, we can see how to implement java.lang.Runnable in a Rhino shell session:
 
@@ -153,7 +153,7 @@ js> t.start()
 hi
 ```
 
-### [Adding Java objects]()
+### Adding Java objects
 
 The next example is [RunScript2](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/RunScript2.java). This is the same as RunScript, but with the addition of two extra lines of code:
 
@@ -170,7 +170,7 @@ $ java RunScript2 "out.println(42)"
 undefined
 ```
 
-## [Using JavaScript objects from Java]()
+## Using JavaScript objects from Java
 
 After evaluating a script it's possible to query the scope for variables and functions, extracting values and calling JavaScript functions. This is illustrated in the [RunScript3](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/RunScript3.java) example. This example adds the ability to print the value of variable _x_ and the result of calling function `f`. Both _x_ and _f_ are expected to be defined by the evaluated script. For example,
 
@@ -183,7 +183,7 @@ x is not defined.
 f("my args") = my arg
 ```
 
-### [Using JavaScript variables]()
+### Using JavaScript variables
 
 To print out the value of _x_, we add the following code:
 
@@ -196,7 +196,7 @@ if (x == Scriptable.NOT_FOUND) {
 }
 ```
 
-### [Calling JavaScript functions]()
+### Calling JavaScript functions
 
 To get the function _f_, call it, and print the result, we add this code:
 
@@ -213,13 +213,13 @@ if (!(fObj instanceof Function)) {
 }
 ```
 
-## [JavaScript host objects]()
+## JavaScript host objects
 
-### [Defining Host Objects]()
+### Defining Host Objects
 
 Custom host objects can implement special JavaScript features like dynamic properties.
 
-### [Counter example]()
+### Counter example
 
 The [Counter example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/Counter.java) is a simple host object. We'll go through it method by method below.
 
@@ -241,7 +241,7 @@ js> c.count
 0
 ```
 
-### [Counter's constructors]()
+### Counter's constructors
 
 The zero-argument constructor is used by Rhino runtime to create instances. For the counter example, no initialization work is needed, so the implementation is empty.
 
@@ -256,7 +256,7 @@ public void jsConstructor(int a) { count
 = a; }
 ```
 
-### [Class name]()
+### Class name
 
 The class name is defined by the `getClassName` method. This is used to determine the name of the constructor.
 
@@ -265,7 +265,7 @@ public String getClassName() { return "Counter";
 }
 ```
 
-### [Dynamic properties]()
+### Dynamic properties
 
 Dynamic properties are defined by methods beginning with `jsGet_` or `jsSet_`. The method `jsGet_count` defines the_count_ property.
 
@@ -276,7 +276,7 @@ public int jsGet_count() { return count++;
 
 The expression `c.count` in the JavaScript code above results in a call to this method.
 
-### [Defining JavaScript "methods"]()
+### Defining JavaScript "methods"
 
 Methods can be defined using the `jsFunction_ prefix`. Here we define `resetCount` for JavaScript.
 
@@ -287,7 +287,7 @@ public void jsFunction_resetCount() { count
 
 The call `c.resetCount()` above calls this method.
 
-### [Adding Counter to RunScript]()
+### Adding Counter to RunScript
 
 Now take a look at the [RunScript4 example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/RunScript4.java). It's the same as RunScript except for two additions. The method `ScriptableObject.defineClass` uses a Java class to define the Counter "class" in the top-level scope:
 

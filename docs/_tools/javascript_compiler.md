@@ -1,7 +1,7 @@
 ---
-title: "Rhino JavaScript compiler"
+title: "JavaScript compiler"
 ---
-# Rhino JavaScript compiler
+# JavaScript compiler
 {: .no_toc }
 
 {: .fs-6 .fw-300 }
