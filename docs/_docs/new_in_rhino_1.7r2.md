@@ -59,7 +59,8 @@ try {
 } finally {
     Context.exit();
 }
-```Note also that as an added convenience ContinuationPending supports saving an application-defined object. The continuations API is only supported for interpreted mode.
+```
+Note also that as an added convenience ContinuationPending supports saving an application-defined object. The continuations API is only supported for interpreted mode.
 
 For more examples of using the API, see the unit test, [ContinuationsAPITest.java](https://github.com/mozilla/rhino/testsrc/org/mozilla/javascript/tests/ContinuationsApiTest.java).
 

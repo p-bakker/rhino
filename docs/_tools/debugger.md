@@ -15,7 +15,7 @@ title: "Debugger"
 ---
 The Rhino JavaScript debugger is a GUI that allows debugging of interpreted JavaScript scripts run in Rhino. Note that this debugger **will not** work with JavaScript scripts run in the mozilla browser since Rhino is not the engine used in such environments.
 
-![](https://i.imgur.com/wcniV3X.png)
+![](/assets/images/debuggerui.png)
 
 Current limitations:
 

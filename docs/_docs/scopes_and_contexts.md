@@ -53,7 +53,8 @@ The easiest way to embed Rhino is just to create a new scope this way whenever y
 
 So how are scopes used to look up names? In general, variables are looked up by starting at the current variable object (which is different depending on what code is being executed in the program), traversing its prototype chain, and then traversing the parent chain. In the diagram below, the order in which the six objects are traversed is indicated.
 
-![Order of lookups in a two-deep scope chain with prototypes.]()**Order of lookups in a two-deep scope chain with prototypes.**
+![Order of lookups in a two-deep scope chain with prototypes.](/assets/images/lookup.gif)
+**Order of lookups in a two-deep scope chain with prototypes.**
 
 For a more concrete example, let's consider the following script:
 
@@ -70,7 +71,8 @@ f(6);
 
 We have a top-level variable `g`, and the call to `f` will create a new top-level variable `x`. All top-level variables are properties of the scope object. When we start executing `f`, the scope chain will start with the function's activation object and will end with the top-level scope (see diagram below). The activation object has two properties, 'a' for the argument, and 'v' for the variable. The top-level scope has properties for the variable `g` and the function `f`.
 
-![An example scope chain for a simple script.](https://bug851266.bugzilla.mozilla.org/attachment.cgi?id=763084)**An example scope chain for a simple script.**
+![An example scope chain for a simple script.](/assets/images/scopes.gif)
+**An example scope chain for a simple script.**
 
 When the statement `x = v + a;` is executed, the scope chain is traversed looking for a 'x' property. When none is found, a new property 'x' is created in the top-level scope.
 
