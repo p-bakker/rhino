@@ -27,7 +27,6 @@ Compilation of JavaScript source to class files is supported. It is possible to 
 
 There are six fundamental types in JavaScript. These types are implemented with the following Java types and values:
 
-
 |  JavaScript fundamental type  |  Java type  |
 |  ---  |  ---  |
  |  Undefined  |  A singleton object defined by `Context.getUndefinedType()`  |
@@ -47,15 +46,15 @@ The behavior of the JavaScript engine is undefined if a value of any type other 
 
 Properties in JavaScript objects may be accessed using either string or numeric identifiers. Conceptually, all accessors are converted to strings in order to perform the lookup of the property in the object. However, this is not the implementation used in practice because a number to string conversion is too expensive to be performed on every array access.
 
-Instead, every property accessor method in [Scriptable](http://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/scriptable.html) (`has`, `get`, `set`, `remove`, `getAttributes`, and `setAttributes`) has overloaded forms that take either a `String` or an `int` argument. It is the responsibility of the caller to invoke the appropriate overloaded form. For example, evaluating the expression `obj["3"]` will invoke the get(int, Scriptable) method even though the property name was presented in the script as a string. Similarly, values of numbers that do not fix in integers (like 1.1 and 0x100000000) must be converted to strings.
+Instead, every property accessor method in [Scriptable](http://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/Scriptable.html) (`has`, `get`, `set`, `remove`, `getAttributes`, and `setAttributes`) has overloaded forms that take either a `String` or an `int` argument. It is the responsibility of the caller to invoke the appropriate overloaded form. For example, evaluating the expression `obj["3"]` will invoke the get(int, Scriptable) method even though the property name was presented in the script as a string. Similarly, values of numbers that do not fix in integers (like 1.1 and 0x100000000) must be converted to strings.
 
 ## Defining Host Objects
 
 Host objects are JavaScript objects that provide special access to the host environment. For example, in a browser environment, the Window and Document objects are host objects.
 
-The easiest way to define new host objects is by using [ScriptableObject.defineClass()](http://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/scriptableobject.html#defineclass%28org.mozilla.javascript.scriptable,%20java.lang.class%29). This method defines a set of JavaScript objects using a Java class. Several of the examples define host objects this way.
+The easiest way to define new host objects is by using [ScriptableObject.defineClass()](http://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/ScriptableObject.html#defineClass%28org.mozilla.javascript.Scriptable,%20java.lang.Class%29). This method defines a set of JavaScript objects using a Java class. Several of the examples define host objects this way.
 
-If the services provided by `defineClass` are insufficient, try other methods of [ScriptableObject](http://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/scriptableobject.html) and [FunctionObject](http://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/functionobject.html), such as `defineProperty` and `defineFunctionProperties`.
+If the services provided by `defineClass` are insufficient, try other methods of [ScriptableObject](http://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/ScriptableObject.html) and [FunctionObject](http://mozilla.github.io/rhino/javadoc/org/mozilla/javascript/FunctionObject.html), such as `defineProperty` and `defineFunctionProperties`.
 
 ## Contexts and Threads
 

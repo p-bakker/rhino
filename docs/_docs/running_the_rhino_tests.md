@@ -13,7 +13,7 @@ title: "Running the Rhino tests"
 {:toc}
 
 ---
-To run the [Rhino](docs) tests, simply run the `junit-all` Ant task in the top-level Rhino directory:
+To run the [Rhino](/docs) tests, simply run the `junit-all` Ant task in the top-level Rhino directory:
 
 ```
 $ cd rhino

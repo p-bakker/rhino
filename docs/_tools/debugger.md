@@ -15,7 +15,7 @@ title: "Debugger"
 ---
 The Rhino JavaScript debugger is a GUI that allows debugging of interpreted JavaScript scripts run in Rhino. Note that this debugger **will not** work with JavaScript scripts run in the mozilla browser since Rhino is not the engine used in such environments.
 
-![](https://i.imgur.com/wcniv3x.png)
+![](https://i.imgur.com/wcniV3X.png)
 
 Current limitations:
 
@@ -37,7 +37,6 @@ The Rhino JavaScript Debugger can debug scripts running in multiple threads and 
 |  Opening Scripts  |  You may select the **_File->Open_** menu item on the menu bar to load JavaScript scripts contained in files. This action will display a file-selection dialog box prompting you for the location of a script to load. The selected file will be compiled and displayed in a new window.  |
 |  Running Scripts  |  You may select the **_File->Run_** menu item on the menu bar to execute JavaScript scripts contained in files. This action will display a file-selection dialog box prompting you for the location of a script to execute. The loaded script will be run in a new thread and control will be given to the debugger on its first instruction.  |
 
-
 ## Controlling Execution
 
 The debugger provides the following facilities for you to control the execution of scripts you are debugging:
@@ -52,7 +51,6 @@ The debugger provides the following facilities for you to control the execution 
 |  Break on Function Exit  |  Selecting **_Debug->Break on Function Return_** will give control to the debugger whenever the execution is about to return from a function or script.  |
 |  Moving Up and Down the Stack  |  The lower-left (dockable) pane in the debugger main window contains a combo-box labeled "Context:" which displays the current stack of the executing script. You may move up and down the stack by selecting an entry in the combo-box. When you select a stack frame the variables and watch windows are updated to reflect the names and values of the variables visible at that scope.  |
 |  Setting and Clearing Breakpoints  |  The main desktop of the debugger contains file windows which display the contents of each script you are debugging. You may set a breakpoint in a script by doing one of the following:<br> - Place the cursor on the line at which you want to set a breakpoint and right-click with the mouse. This action will display a pop-up menu. Select the **_Set Breakpoint_** menu item.<br>- Simply single-click on the line number of the line at which you want to set a breakpoint.<br><br> If the selected line contains executable code a red dot will appear next to the line number and a breakpoint will be set at that location.<br><br> You may clear breakpoint in a script by doing one of the following:<br><br> - Place the cursor on the line at which you want to clear a breakpoint and right-click with the mouse. This action will display a pop-up menu. Select the **_Clear Breakpoint_** menu item.<br>- Simply single-click on the red dot or the line number of the line at which you want to clear a breakpoint.<br><br> The red dot will disappear and the breakpoint at that location will be cleared.  |
-
 
 ## Viewing Variables
 

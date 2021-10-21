@@ -27,7 +27,6 @@ Compilation of JavaScript source to class files is supported. It is possible to 
 
 There are six fundamental types in JavaScript. These types are implemented with the following Java types and values:
 
-
 |  JavaScript fundamental type  |  Java type  |
 |  ---  |  ---  |
  |  `Undefined`  |  A singleton object defined by `Context.getUndefinedType()`  |
@@ -37,11 +36,11 @@ There are six fundamental types in JavaScript. These types are implemented with 
 |  `String`  |  `java.lang.String`  |
 |  `Object`  |  `org.mozilla.javascript.Scriptable`  |
 
-In addition, ECMA refers to objects that implement a [`call()`](https://developer.mozilla.org/en-us/docs/web/javascript/reference/global_objects/function/call) method as functions. These object types are represented by implementing the [Function interface](https://developer.mozilla.org/en/core_javascript_1.5_reference/global_objects/function/prototype).
+In addition, ECMA refers to objects that implement a [`call()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) method as functions. These object types are represented by implementing the [Function interface](https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Function/prototype).
 
 Since JavaScript is a dynamically typed language, the static Java type of a JavaScript value is `java.lang.Object`.
 
-The behavior of the JavaScript engine is undefined if a value of any type other than the ones described above is introduced into JavaScript. This caveat does not apply to scripts that use [LiveConnect](https://developer.mozilla.org/en/liveconnect); the Java values are wrapped and unwrapped as appropriate to conform to the above type constraints.
+The behavior of the JavaScript engine is undefined if a value of any type other than the ones described above is introduced into JavaScript. This caveat does not apply to scripts that use [LiveConnect](https://developer.mozilla.org/en/LiveConnect); the Java values are wrapped and unwrapped as appropriate to conform to the above type constraints.
 
 ## Property access
 

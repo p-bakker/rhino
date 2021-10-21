@@ -70,7 +70,7 @@ f(6);
 
 We have a top-level variable `g`, and the call to `f` will create a new top-level variable `x`. All top-level variables are properties of the scope object. When we start executing `f`, the scope chain will start with the function's activation object and will end with the top-level scope (see diagram below). The activation object has two properties, 'a' for the argument, and 'v' for the variable. The top-level scope has properties for the variable `g` and the function `f`.
 
-![An example scope chain for a simple script.]()**An example scope chain for a simple script.**
+![An example scope chain for a simple script.](https://bug851266.bugzilla.mozilla.org/attachment.cgi?id=763084)**An example scope chain for a simple script.**
 
 When the statement `x = v + a;` is executed, the scope chain is traversed looking for a 'x' property. When none is found, a new property 'x' is created in the top-level scope.
 
@@ -127,7 +127,7 @@ There's one problem with the setup outlined above. Calls to functions in JavaScr
 
 With Rhino 1.6, it is possible to use _dynamic scope_. With dynamic scope, functions look at the top-level scope of the currently executed script rather than their lexical scope. So we can store information that varies across scopes in the instance scope yet still share functions that manipulate that information reside in the shared scope.
 
-The [DynamicScopes example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/dynamicscopes.java) illustrates all the points discussed above.
+The [DynamicScopes example](https://dxr.mozilla.org/mozilla/source/js/rhino/examples/DynamicScopes.java) illustrates all the points discussed above.
 
 ## More on Scopes
 
