@@ -63,7 +63,7 @@ Version 1.2 only returns array or object literal notation (`"[1]"` or `"{a:1, b:
 
 #### `Array` constructor
 
-`Array(_i_)` for a number argument _i_ constructs an array with a single element equal to _i_ for version 1.2 only. Otherwise the ECMA conformant version is used (an array is constructed with no elements but with `length` property equal to _i_).
+`Array(i)` for a number argument _i_ constructs an array with a single element equal to _i_ for version 1.2 only. Otherwise the ECMA conformant version is used (an array is constructed with no elements but with `length` property equal to _i_).
 
 #### `String.prototype.substring`
 

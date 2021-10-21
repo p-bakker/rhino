@@ -1,4 +1,4 @@
-/* force grouped pages to always be expanded Needs further tweaks */
-.nav-list .nav-list-item.active>ul.nav-list {
-    display: block;
+/* forcing cell content in Madkdown Tables to vertically align at the top instead of centered */
+div.table-wrapper td {
+    vertical-align: top;
 }
