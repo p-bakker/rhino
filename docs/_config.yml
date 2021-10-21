@@ -38,3 +38,7 @@ defaults:
       layout: "default"
 
 encoding: utf-8
+
+relative_links:
+  enabled: true
+  collections: true
