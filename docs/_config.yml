@@ -10,6 +10,9 @@ gem:
   - jekyll-mentions
 #  - jekyll-redirect-from
 
+plugins:
+  - jekyll-relative-links
+
 collections:
   docs:
     permalink: "/:collection/:path/"
