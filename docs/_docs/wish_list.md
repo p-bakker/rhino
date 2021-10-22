@@ -49,7 +49,7 @@ _Done!_
 
 Analyze benchmarks and see how Rhino can improve performance.
 
-Probably the best starting point is the [V8 benchmarks](http://v8.googlecode.com/svn/data/benchmarks/v5/run.html).
+Probably the best starting point is the [V8 benchmarks](https://v8.googlecode.com/svn/data/benchmarks/v5/run.html).
 
 ## Features
 

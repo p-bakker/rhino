@@ -21,7 +21,7 @@ Rhino now supports the remaining JavaScript 1.5 features that hadn't been implem
 
 ### JavaScript 1.5: "strict" mode with new warning messages
 
-See [Tackling JavaScript strict warnings](http://www.javascriptkit.com/javatutors/serror.shtml) for a description of JavaScript strict mode.
+See [Tackling JavaScript strict warnings](https://www.javascriptkit.com/javatutors/serror.shtml) for a description of JavaScript strict mode.
 
 Briefly, Rhino reports warnings in strict mode for
 

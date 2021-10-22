@@ -13,7 +13,7 @@ title: "History"
 {:toc}
 
 ---
-Rhino gets its name from the animal on the cover of the [O'Reilly](http://www.ora.com/) book about JavaScript.
+Rhino gets its name from the animal on the cover of the [O'Reilly](https://www.ora.com/) book about JavaScript.
 
 The Rhino project was started at Netscape in the autumn of 1997. At the time, Netscape was planning to produce a version of Navigator written entirely in Java and so it needed an implementation of JavaScript written in Java. When Netscape stopped work on "Javagator," as it was called, somehow Rhino escaped the axe (rumor had it that the executives "forgot" it existed). For a time, a couple of major companies (including Sun) licensed Rhino for use in their products and paid Netscape to do so, allowing work on Rhino to continue. Now Rhino is part of Mozilla's open-source repository.
 

@@ -19,21 +19,21 @@ Most people who have used [JavaScript](https://developer.mozilla.org/en-US/docs/
 
 Rhino contains
 
-- All the features of [JavaScript 1.7](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7)
+- All the features of [JavaScript 1.7](https://web.archive.org/web/20210502042346mp_/https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7)
 - Allows direct scripting of Java
-- [A JavaScript shell](../tools/shell.md) for executing JavaScript scripts
-- [A JavaScript compiler](../tools/javascript_compiler.md) to transform JavaScript source files into Java class files
-- [A JavaScript debugger](../tools/debugger.md) for scripts executed with Rhino
+- [A JavaScript shell](../_tools/shell.md) for executing JavaScript scripts
+- [A JavaScript compiler](../_tools/javascript_compiler.md) to transform JavaScript source files into Java class files
+- [A JavaScript debugger](../_tools/debugger.md) for scripts executed with Rhino
 
 ### Language
 
-The JavaScript language itself is standardized by [Standard ECMA-262 ECMAScript: A general purpose, cross-platform programming language](http://www.ecma-international.org/publications/standards/Ecma-262.htm). Rhino 1.3 and greater conform to Edition 3 of the Standard.
+The JavaScript language itself is standardized by [Standard ECMA-262 ECMAScript: A general purpose, cross-platform programming language](https://www.ecma-international.org/publications/standards/Ecma-262.htm). Rhino 1.3 and greater conform to Edition 3 of the Standard.
 
 Rhino 1.6 and greater implement [ECMA-357 ECMAScript for XML (E4X)](https://web.archive.org/web/20131104082608/http://www.ecma-international.org/publications/standards/Ecma-357.htm). See the specification for more information on the standard, and [Rhino version 1.6R1 release notes](https://www-archive.mozilla.org/rhino/rhino16r1) for details on the implementation in Rhino.
 
 In addition, Rhino has implemented JavaAdapters, which allows JavaScript to implement any Java interface or extend any Java class with a JavaScript object. See the `enum.js` example for more information.
 
-Numerous books and tutorials on JavaScript are available. [JavaScript: The Definitive Guide](http://www.oreilly.com/catalog/jscript5/) is recommended, and contains a chapter on Rhino.
+Numerous books and tutorials on JavaScript are available. [JavaScript: The Definitive Guide](https://www.oreilly.com/catalog/jscript5/) is recommended, and contains a chapter on Rhino.
 
 ### Deprecated Language Features
 

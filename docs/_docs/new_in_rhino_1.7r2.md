@@ -66,7 +66,7 @@ For more examples of using the API, see the unit test, [ContinuationsAPITest.jav
 
 ## Better line editing for Rhino shell
 
-Rhino 1.7R2 now has line editing in the Rhino shell. The heavy lifting comes from [JLine](http://jline.sourceforge.net/), a nice Java library for handling console input. We get command history (using the up and down arrow keys to bring up previous command lines) for free. And with some additional code in Rhino we have limited support for completion.
+Rhino 1.7R2 now has line editing in the Rhino shell. The heavy lifting comes from [JLine](https://jline.sourceforge.net/), a nice Java library for handling console input. We get command history (using the up and down arrow keys to bring up previous command lines) for free. And with some additional code in Rhino we have limited support for completion.
 
 We don't ship with JLine with Rhino, so you'll have to download it yourself. Rhino automatically detects whether JLine is on the classpath and uses it if so and otherwise maintains the previous simple behavior. So to run your shell with JLine your command will look like
 
@@ -128,9 +128,9 @@ See [Rhino License](license.md) for details on the new license for files in the 
 
 ## Doctest
 
-Python is a fertile ground of good ideas, and we've seen a number of Python's ideas surface in JavaScript recently. JavaScript 1.7's [generators](http://developer.mozilla.org/en/docs/New_in_JavaScript_1.7#Generators)and [array comprehensions](http://developer.mozilla.org/en/docs/New_in_JavaScript_1.7#Array_comprehensions) are two recent examples.
+Python is a fertile ground of good ideas, and we've seen a number of Python's ideas surface in JavaScript recently. JavaScript 1.7's [generators](https://web.archive.org/web/20210502042346mp_/https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7#Generators)and [array comprehensions](https://web.archive.org/web/20210502042346mp_/https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7#Array_comprehensions) are two recent examples.
 
-Rhino 1.7R2 contains another Python idea: [doctest](http://docs.python.org/lib/module-doctest.html). This is a function that will test snippets of shell sessions. It gets its name from its use testing these snippets that appear in documentation comments, but it turns out to be a very convenient way to write tests more generally.
+Rhino 1.7R2 contains another Python idea: [doctest](https://docs.python.org/lib/module-doctest.html). This is a function that will test snippets of shell sessions. It gets its name from its use testing these snippets that appear in documentation comments, but it turns out to be a very convenient way to write tests more generally.
 
 For example, say you've written a new function `hello()`. I usually go to the shell and play with it to make sure it works correctly:
 
@@ -146,7 +146,7 @@ js> hello()
 hello, undefined
 ```
 
-Now to test this function you might write a  [JUnit](http://www.junit.org/) test that executes a bunch of setup code and then calls `hello()` three times, saving the result value, and calling a comparison function with the actual and expected values. It's a decent amount of code to write.
+Now to test this function you might write a  [JUnit](https://www.junit.org/) test that executes a bunch of setup code and then calls `hello()` three times, saving the result value, and calling a comparison function with the actual and expected values. It's a decent amount of code to write.
 
 Doctest does this all for me. Rhino 1.7R2 contains both a new doctest shell function and a JUnit test [DoctestsTest](https://github.com/mozilla/rhino/testsrc/org/mozilla/javascript/tests/DoctestsTest.java) that finds files with a `.doctest` extension and runs them. So now all I need to do is copy the shell session above, paste it into `hello.doctest`, and put it in the right directory and I have a JUnit test! It's much more convenient to write tests, which greatly increases the chances that tests actually get written.
 

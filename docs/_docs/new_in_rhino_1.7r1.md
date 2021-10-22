@@ -17,7 +17,7 @@ Rhino 1.7R1 is a major feature release.
 
 ## JavaScript 1.7 features
 
-As of Rhino1.7R1, Rhino now supports the features of JavaScript 1.7. See [New in JavaScript 1.7](https://web.archive.org/web/20210308011309mp_/https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in__JavaScript_1.7). JavaScript 1.7 supports the following features:
+As of Rhino1.7R1, Rhino now supports the features of JavaScript 1.7. See [New in JavaScript 1.7](en/new_in_javascript_1.7). JavaScript 1.7 supports the following features:
 
 - Generators and iterators
 - Array comprehensions
@@ -28,7 +28,7 @@ To enable JavaScript 1.7 support, you must set the version as 170 using the `Con
 
 ## Creating a JavaScript `Iterator` from a Java `Iterable` or `Iterator`
 
-In an extension to JavaScript 1.7, Rhino now supports creating JavaScript `Iterators` from [java.lang.Iterable](http://java.sun.com/javase/6/docs/api/java/lang/Iterable.html) and [java.util.Iterator](http://java.sun.com/javase/6/docs/api/java/util/Iterator.html) objects. For example:
+In an extension to JavaScript 1.7, Rhino now supports creating JavaScript `Iterators` from [java.lang.Iterable](https://java.sun.com/javase/6/docs/api/java/lang/Iterable.html) and [java.util.Iterator](https://java.sun.com/javase/6/docs/api/java/util/Iterator.html) objects. For example:
 
 ```
 js> m = new java.util.LinkedHashMap()
@@ -51,7 +51,7 @@ As of Rhino 1.7R1, the E4X implementation based on DOM3 is now preferred over th
 
 ## Support for JDK 1.4 through separate JAR file
 
-We now require at least JDK 1.5 in order to compile Rhino sources. As a result, the `js.jar` in the binary distribution is not runnable with JDK 1.4. In order to support people running Rhino on JDK 1.4, we use [Retrotranslator](http://retrotranslator.sourceforge.net) to produce `js-14.jar`, which is compatible with JDK 1.4. `js-14.jar` is also in the binary distribution and can be built from source using ant.
+We now require at least JDK 1.5 in order to compile Rhino sources. As a result, the `js.jar` in the binary distribution is not runnable with JDK 1.4. In order to support people running Rhino on JDK 1.4, we use [Retrotranslator](https://retrotranslator.sourceforge.net) to produce `js-14.jar`, which is compatible with JDK 1.4. `js-14.jar` is also in the binary distribution and can be built from source using ant.
 JDK 1.4 support will be dropped entirely from Rhino in a future release.
 
 ## Support for instruction threshold callbacks in compiled mode
@@ -71,7 +71,7 @@ Prior to 1.7R1, Java classes in packages starting with "java." could be referenc
 
 ## Array and String generics
 
-See [New in JavaScript 1.6](https://web.archive.org/web/20210308011309mp_/https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in__JavaScript_1.6). This feature is now implemented in Rhino.
+See [New in JavaScript 1.6](https://web.archive.org/web/20210502042346mp_/https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.6). This feature is now implemented in Rhino.
 
 ## Configurable prompts in the shell
 

@@ -13,7 +13,7 @@ title: "New in Rhino 1.7R4"
 {:toc}
 
 ---
-- Update license to [MPL 2.0](http://www.mozilla.org/MPL/2.0/)
+- Update license to [MPL 2.0](https://www.mozilla.org/MPL/2.0/)
 - Make string concatenation with `+` fast
 - Java class generation updates and fixes
 - Faster number to string conversion
@@ -22,9 +22,9 @@ title: "New in Rhino 1.7R4"
 - ES5 compliance fixes
 - Improved interpreter performance
 - Improved CommonJS module implementation
-- JavaScript 1.8 [generator expressions](https://developer.mozilla.org/en/JavaScript/New_in_JavaScript/1.8#Generator_expressions_%28Merge_into_Generator_expressions%29)
+- JavaScript 1.8 [generator expressions](https://web.archive.org/web/20210502042346mp_/https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.8)
 - Many Parser and AST fixes
-- Use [JavaScript 1.7](https://developer.mozilla.org/en/JavaScript/New_in_JavaScript/1.7) as default version in Rhino shell
+- Use [JavaScript 1.7](https://web.archive.org/web/20210502042346mp_/https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7) as default version in Rhino shell
 - JavaAdapter improvements
 - Fixes in JS to Java access
 - Include Mozilla test suite
