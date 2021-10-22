@@ -30,12 +30,25 @@ just_the_docs:
     tools:
       name: Tools
 
-#defaults:
-#  -
-#    scope:
-#      path: "" # an empty string here means all files in the project
-#    values:
-#      layout: "default"
+defaults:
+  -
+    scope:
+      path: ""
+      type: docs
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: tools
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: tutorials
+    values:
+      layout: "default"
 
 encoding: utf-8
 
