@@ -19,12 +19,12 @@ title: "Rhino"
 
 #### Rhino downloads
 
-How to [get source and binaries](/docs/download_rhino).
+How to [get source and binaries](download_rhino.md).
 
 #### Rhino documentation
 
-[Information on Rhino](/docs/documentation) for script writers and embedders.
+[Information on Rhino](documentation.md) for script writers and embedders.
 
 #### Rhino help
 
-[Some resources](/docs/community) if you get stuck.
+[Some resources](community.md) if you get stuck.

@@ -166,7 +166,6 @@ As an example, consider the following Java class that defines a number of overlo
 
 ```
 public class Overload {
-
     public String f(Object o) { return "f(Object)"; }
     public String f(String s) { return "f(String)"; }
     public String f(int i)    { return "f(int)"; }
@@ -377,7 +376,7 @@ with (SwingGui) {
 }
 ```
 
-Previously such functionality was available only to embeddings that used [`org.mozilla.javascript.ImporterTopLevel`](/javadocs/org/mozilla/javascript/importertoplevel.html) class as the top level scope. The class provides additional `importPackage()` and `importClass()` global functions for scripts but their extensive usage has tendency to pollute the global name space with names of Java classes and prevents loaded classes from garbage collection.
+Previously such functionality was available only to embeddings that used [`org.mozilla.javascript.ImporterTopLevel`](javadocs/org/mozilla/javascript/importertoplevel.html) class as the top level scope. The class provides additional `importPackage()` and `importClass()` global functions for scripts but their extensive usage has tendency to pollute the global name space with names of Java classes and prevents loaded classes from garbage collection.
 
 See [Bugzilla 245882](http://bugzilla.mozilla.org/show_bug.cgi?id=245882) for details.
 

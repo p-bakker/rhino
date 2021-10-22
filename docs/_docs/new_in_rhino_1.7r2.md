@@ -17,10 +17,10 @@ title: "New in Rhino 1.7R2"
 
 Rhino has supported Continuations for some time now, but there wasn't a great way to interact with continuations from Java. Continuations have been useful with in server-side scripting, since it allows for saving and restarting JavaScript execution, possibly with serializing the execution state when stopped. With Rhino 1.7R2, methods in `org.mozilla.javascript.Context` allow for control from Java:
 
-- [executeScriptWithContinuations](/javadocs/org/mozilla/javascript/context.html#executescriptwithcontinuations(org.mozilla.javascript.script,%20org.mozilla.javascript.scriptable)) - Execute script that may pause execution by capturing a continuation.
+- [executeScriptWithContinuations](javadocs/org/mozilla/javascript/context.html#executescriptwithcontinuations(org.mozilla.javascript.script,%20org.mozilla.javascript.scriptable)) - Execute script that may pause execution by capturing a continuation.
 - `callFunctionWithContinuations - Call function that may pause execution by capturing a continuation.`
-- [captureContinuation](/javadocs/org/mozilla/javascript/context.html#capturecontinuation()) - Capture a continuation from the current execution.
-- [resumeContinuation](/javadocs/org/mozilla/javascript/context.html#resumecontinuation(java.lang.object,%20org.mozilla.javascript.scriptable,%20java.lang.object)) - Restarts execution of the JavaScript suspended at the call to captureContinuation.
+- [captureContinuation](javadocs/org/mozilla/javascript/context.html#capturecontinuation()) - Capture a continuation from the current execution.
+- [resumeContinuation](javadocs/org/mozilla/javascript/context.html#resumecontinuation(java.lang.object,%20org.mozilla.javascript.scriptable,%20java.lang.object)) - Restarts execution of the JavaScript suspended at the call to captureContinuation.
 
 For example, if you had a Java class MyClass with a method f(). Say that you wanted to pause execution of a script when f() was called. You could call captureContinuation, which wraps up all the state of the current execution and returns it as a ContinuationPending object. ContinuationPending is also an exception; you indicate to Rhino that you want to suspend execution by throwing the exception:
 
@@ -124,7 +124,7 @@ For more details, see [bug 418034](https://bugzilla.mozilla.org/show_bug.cgi?id=
 
 Thanks to the sharp eyes of Hannes Wallnoefer, who spotted a more-liberally licensed version of files we depended on for the Rhino debugger GUI, we now have the debugger fully built and shipped with Rhino.
 
-See [Rhino License](/docs/license) for details on the new license for files in the debugger.
+See [Rhino License](license.md) for details on the new license for files in the debugger.
 
 ## Doctest
 

@@ -61,7 +61,7 @@ Rhino 1.6R6 adds org.mozilla.javascript.PolicySecurityController as a concrete i
 
 Rhino now comes with test drivers written in Java. These drivers can be used to test Rhino if you are making any changes to the core engine. They are designed to use the tests shared with the C-based SpiderMonkey engine in mozilla/js/tests in CVS.
 
-See [Running the Rhino tests](/docs/running_the_rhino_tests) for details on how to execute the tests using JsDriver.
+See [Running the Rhino tests](running_the_rhino_tests.md) for details on how to execute the tests using JsDriver.
 
 ## Support for calling Java methods and constructors with variable argument lists
 

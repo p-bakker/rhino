@@ -17,36 +17,36 @@ Information on Rhino for script writers and embedders.
 
 ## General
 
-|  [Overview](overview)  |  An overview of the JavaScript language and of Rhino.  |
-|  [License](license/)  |  Rhino license information.  |
-|  [Requirements and limitations](requirements_and_limitations.html)  |  What you must have to run Rhino; what Rhino cannot do.  |
+|  [Overview](overview.md)  |  An overview of the JavaScript language and of Rhino.  |
+|  [License](license.md)  |  Rhino license information.  |
+|  [Requirements and limitations](requirements_and_limitations.md)  |  What you must have to run Rhino; what Rhino cannot do.  |
 |  [Downloads archive](downloads_archive.md)  |  Includes release notes for Rhino releases  |
-|  [Optimization](docs/optimization)  |  Details on the various optimization levels.  |
-|  [FAQ](docs/faq)  |  Answers to frequently asked questions about Rhino.  |
-|  [Rhino history](docs/history)  |  History of the beast.  |
+|  [Optimization](optimization.md)  |  Details on the various optimization levels.  |
+|  [FAQ](faq.md)  |  Answers to frequently asked questions about Rhino.  |
+|  [Rhino history](history.md)  |  History of the beast.  |
 
 ## Writing Scripts
 
-|  [Scripting Java](/tutorials/scripting_java)  |  How to use Rhino to script Java classes.  |
-|  [Performance Hints](/docs/performance)  |  Some tips on writing faster JavaScript code.  |
+|  [Scripting Java](../tutorials/scripting_java.md)  |  How to use Rhino to script Java classes.  |
+|  [Performance Hints](performance.md)  |  Some tips on writing faster JavaScript code.  |
 
 ## JavaScript Tools
 
-|  [Rhino Shell](/tools/shell)  |  Interactive or batch execution of scripts.  |
-|  [JavaScript Debugger](/tools/debugger)  |  Debugging scripts running in Rhino.  |
-|  [JavaScript Compiler](/tools/javascript_compiler)  |  Compiling scripts into Java class files.  |
-|  [Running the Rhino tests](/docs/running_the_rhino_tests)  |  Running the JavaScript test suite with Rhino.  |
+|  [Rhino Shell](../tools/shell.md)  |  Interactive or batch execution of scripts.  |
+|  [JavaScript Debugger](../tools/debugger.md)  |  Debugging scripts running in Rhino.  |
+|  [JavaScript Compiler](../tools/javascript_compiler.md)  |  Compiling scripts into Java class files.  |
+|  [Running the Rhino tests](running_the_rhino_tests.md)  |  Running the JavaScript test suite with Rhino.  |
 
 ## Embedding Rhino
 
-|  [Embedding tutorial](/tutorials/embedding_tutorial)  |  A short tutorial on how to embed Rhino into your application.  |
-|  [API Javadoc Reference](/javadocs/index.html) (Link broken?  [Try this at Jarvana.](http://www.jarvana.com/jarvana/view/org/mozilla/rhino/1.7R3/rhino-1.7R3-javadoc.jar!/index.html))  |  An annotated outline of the programming interface to Rhino (tip only).  |
-|  [Scopes and Contexts](/docs/scopes_and_contexts)  |  Describes how to use scopes and contexts for the best performance and flexibility, with an eye toward multithreaded environments.  |
-|  [Serialization](/docs/serialization)  |  How to serialize JavaScript objects and functions in Rhino.  |
-|  [Runtime](/docs/runtime)  |  A brief description of the JavaScript runtime.  |
-|  [Small Footprint](/docs/footprint)  |  Hints for those interested in small-footprint embeddings.  |
-|  [Examples](/docs/examples)  |  A set of examples showing how to control the JavaScript engine and build JavaScript host objects.  |
-|  [Using Rhino with Bean Scripting Framework (BSF)](/docs/bsf)  |  How to use Rhino with apps that support BSF (Bean Scripting Framework) from the Apache Jakarta project.  |
+|  [Embedding tutorial](../tutorials/embedding_tutorial.md)  |  A short tutorial on how to embed Rhino into your application.  |
+|  [API Javadoc Reference](javadocs/index.html) (Link broken?  [Try this at Jarvana.](http://www.jarvana.com/jarvana/view/org/mozilla/rhino/1.7R3/rhino-1.7R3-javadoc.jar!/index.html))  |  An annotated outline of the programming interface to Rhino (tip only).  |
+|  [Scopes and Contexts](scopes_and_contexts.md)  |  Describes how to use scopes and contexts for the best performance and flexibility, with an eye toward multithreaded environments.  |
+|  [Serialization](serialization.md)  |  How to serialize JavaScript objects and functions in Rhino.  |
+|  [Runtime](runtime.md)  |  A brief description of the JavaScript runtime.  |
+|  [Small Footprint](footprint.md)  |  Hints for those interested in small-footprint embeddings.  |
+|  [Examples](examples.md)  |  A set of examples showing how to control the JavaScript engine and build JavaScript host objects.  |
+|  [Using Rhino with Bean Scripting Framework (BSF)](bsf.md)  |  How to use Rhino with apps that support BSF (Bean Scripting Framework) from the Apache Jakarta project.  |
 
 ## External references
 
@@ -54,4 +54,4 @@ Information on Rhino for script writers and embedders.
 
 ## Rhino contributors
 
-Interested in contributing to Rhino? Check out the [Rhino Wish List](/docs/rhino_wish_list).
+Interested in contributing to Rhino? Check out the [Rhino Wish List](rhino_wish_list.md).

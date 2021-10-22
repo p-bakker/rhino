@@ -21,9 +21,9 @@ Rhino contains
 
 - All the features of [JavaScript 1.7](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7)
 - Allows direct scripting of Java
-- [A JavaScript shell](/tools/shell) for executing JavaScript scripts
-- [A JavaScript compiler](/tools/javascript_compiler) to transform JavaScript source files into Java class files
-- [A JavaScript debugger](/tools/debugger) for scripts executed with Rhino
+- [A JavaScript shell](../tools/shell.md) for executing JavaScript scripts
+- [A JavaScript compiler](../tools/javascript_compiler.md) to transform JavaScript source files into Java class files
+- [A JavaScript debugger](../tools/debugger.md) for scripts executed with Rhino
 
 ### Language
 

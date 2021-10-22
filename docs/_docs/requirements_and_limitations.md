@@ -44,4 +44,3 @@ javaObj.fieldAndMethod = 7;
 ### JSObject
 
 Rhino does **NOT** support the `netscape.javascript.JSObject` class.
-
