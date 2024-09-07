@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="./LICENSE.txt"><img src="https://img.shields.io/badge/license-MPL%202.0-blue.svg?style=for-the-badge" alt="License"></a>
-  <a href="https://github.com/mozilla/rhino/actions/workflows/gradle.yml"><img src="https://img.shields.io/github/workflow/status/mozilla/rhino/Rhino%20CI?logo=GitHub&style=for-the-badge" alt="GitHub Actions"></a>
+  <a href="https://github.com/mozilla/rhino/actions/workflows/gradle.yml"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/mozilla/rhino/gradle.yml?branch=master&style=for-the-badge"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome"></a>
 </p>
 
